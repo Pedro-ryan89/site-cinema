@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+
+
+/*global*/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+ 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+main{
+    display: flexbox;
+    height: 100vh; 
+    width: 100%; 
+    padding-left: 100px;
+    padding-top: 20px;
+    border: solid black;
+}
+
+body{
+    background-color: aliceblue;
+    
+}
+
+
+/*começo da navbar*/
+
+
+/* Navbar */
+
+/* Navbar */
+.container_nav {
+    background: linear-gradient(to right, rgb(45, 45, 52), #000000);
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Configura a direção da flexbox para coluna */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.container_nav h2 {
+    color: rgb(245, 92, 92);
+    font-size: 50px;
+    margin-bottom: 10px; /* Adiciona uma margem inferior para afastar o título da lista */
+}
+
+.container_nav nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Alinha os elementos à direita */
+}
+
+.container_nav nav ul li {
+    margin-left: 20px; /* Espaçamento entre os elementos */
+}
+
+.container_nav nav ul li:first-child {
+    margin-left: 0; /* Remove o espaço à esquerda do primeiro elemento */
+}
+
+.container_nav nav ul li a {
+    color: whitesmoke;
+    padding: 10px 20px;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.container_nav nav ul li a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent; /* Defina a cor da linha como transparente */
+    transition: background-color 0.3s;
+}
+
+.container_nav nav ul li a:hover:after {
+    background-color: rgb(156, 8, 8); /* Defina a cor da linha quando o mouse passar por cima */
+}
+
+
+
+
+.container_nav nav ul li a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    transform: rotate(0deg); /* Ajuste o ângulo da rotação conforme necessário */
+}
+
+
+/*fim nav bar*/
+
+
+/*começo do painel de filmes*/
+
+
+.filmes{
+    
+    display: flex;
+    height: 85vh; 
+    width: 70%; 
+    justify-content: inherit;
+    align-items: center; /* Adiciona alinhamento vertical ao centro */
+    flex-wrap: wrap; /* Para lidar com a quebra de linha das imagens */
+}
+
+.filmes img{
+    margin: 10px;
+    padding-bottom: 250px;
+    
+}
+
+main h1{
+  
+    border-bottom: 1px solid black;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
