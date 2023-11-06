@@ -131,7 +131,6 @@ main h1{
     font-size: small;
 }
 .filme li a {
-    background: #ff9600;
     height: 18px;
     text-align: center;
     border-radius: 4px;
@@ -141,4 +140,27 @@ main h1{
     margin-left: 2px;
     box-shadow: 1px 1px 0 #fff;
     padding: 0 3px;
+}
+/* Classificação 14 */
+a.classificacao-14 {
+    background: orange;
+  }
+  
+  /* Classificação 16 */
+  a.classificacao-16 {
+    background: red;
+  }
+  
+  /* Classificação 18 */
+  a.classificacao-18 {
+    background: black;
+  }
+  
+  /* Classificação L (Livre) */
+  a.classificacao-L {
+    background:  green;
+  }
+div {
+    display: flex;
+    flex-direction: row;
 }
