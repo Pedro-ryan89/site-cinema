@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "01h49",
       "14",
       "/img/filmes_templates/five-nights-at-freddys-o-pesadelo-sem-fim_46543_home.jpg",
-      "https://exemplo.com/trailer_fnaf" // Link para o trailer de Five Nights at Freddy's
+      "https://www.youtube.com/watch?v=FRffQncR1HQ" // Link para o trailer de Five Nights at Freddy's
     );
   });
   
