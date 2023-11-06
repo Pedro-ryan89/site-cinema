@@ -19,12 +19,8 @@ ul {
 }
 
 main{
-    display: flexbox;
-    height: 100vh; 
-    width: 100%; 
     padding-left: 100px;
     padding-top: 20px;
-    border: solid black;
 }
 
 body{
@@ -123,9 +119,3 @@ body{
     
 }
 
-main h1{
-  
-    border-bottom: 1px solid black;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
