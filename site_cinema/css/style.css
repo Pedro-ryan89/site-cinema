@@ -136,25 +136,39 @@ main h1{
     box-shadow: 1px 1px 0 #fff;
     padding: 0 3px;
 }
+/* Classificação 12 */
+a.classificacao-12 {
+    background: yellow;
+    color: #fff;
+    text-shadow: 1px 1px 0px black;
+  }
+
 /* Classificação 14 */
 a.classificacao-14 {
     background: orange;
+    color: #fff;
+    text-shadow: 1px 1px 0px black;
   }
   
   /* Classificação 16 */
   a.classificacao-16 {
     background: red;
+    color: #fff;
+    text-shadow: 1px 1px 0px black;
   }
   
   /* Classificação 18 */
   a.classificacao-18 {
     background: black;
     color: #fff;
+    text-shadow: 1px 1px 0px black;
   }
   
   /* Classificação L (Livre) */
   a.classificacao-L {
     background:  green;
+    color: #fff;
+    text-shadow: 1px 1px 0px black;
   }
   .trailer-button {
     padding: 10px 20px;
@@ -163,7 +177,6 @@ a.classificacao-14 {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
-    border: #000000;
   }
   
   .trailer-button:hover,
@@ -171,3 +184,16 @@ a.classificacao-14 {
     background-color: rgb(245, 92, 92);
     color: white;
   }
+
+
+
+  
+  @media screen and (max-width: 767px) {
+    filme{
+        display: flex;
+        flex-direction: column;
+        height: 85vh; 
+        width: 70%; 
+        flex-wrap: wrap; /* Para lidar com a quebra de linha das imagens */
+    }
+}
