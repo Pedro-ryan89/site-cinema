@@ -121,7 +121,7 @@ body{
 
 main h1{
     border-bottom: 1px solid black;
-    padding-top: 10px;
+    padding-top: 0;
     padding-bottom: 10px;
 }
 .filme ul {
