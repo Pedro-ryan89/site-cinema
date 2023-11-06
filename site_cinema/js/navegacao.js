@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "01h49",
       "14",
       "/img/filmes_templates/five-nights-at-freddys-o-pesadelo-sem-fim_46543_home.jpg",
-      "https://www.youtube.com/watch?v=FRffQncR1HQ" // Link para o trailer de Five Nights at Freddy's
+      "https://www.youtube.com/watch?v=h2lVX71L_3A&t=1s" // Link para o trailer de Five Nights at Freddy's
     );
   });
   
@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "Drama",
         "3h00",
         "16",
-        "/img/filmes_templates/oppenheimer_39761_home.jpg"
+        "/img/filmes_templates/oppenheimer_39761_home.jpg",
+        "https://www.youtube.com/watch?v=F3OxA9Cz17A" // Link para o trailer de Oppenheimer
       );
     });
   
@@ -74,7 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "Animação",
         "1h35",
         "L",
-        "/img/filmes_templates/patrulha-canina-um-filme-superpoderoso_43279_home.jpg"
+        "/img/filmes_templates/patrulha-canina-um-filme-superpoderoso_43279_home.jpg",
+        "https://www.youtube.com/watch?v=GviDlxgG38M" // Link para o trailer de Patrulha Canina
       );
     });
   
@@ -89,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "Terror",
         "2h01",
         "16",
-        "/img/filmes_templates/o-exorcista-o-devoto_46537_home.jpg"
+        "/img/filmes_templates/o-exorcista-o-devoto_46537_home.jpg",
+        "https://www.youtube.com/watch?v=96RCGOaNuCM" // Link para o trailer de O Exorcista
       );
     });
   });
