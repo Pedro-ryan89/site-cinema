@@ -27,7 +27,7 @@ main{
 }
 
 body{
-    background-color: aliceblue;
+    background-color: #EBEBEB;
     
 }
 
@@ -129,13 +129,12 @@ main h1{
 }
 .filme li {
     font-size: small;
-}
+} 
 .filme li a {
     height: 18px;
     text-align: center;
     border-radius: 4px;
     font-weight: bold;
-    color: #fff;
     font-size: 12px;
     margin-left: 2px;
     box-shadow: 1px 1px 0 #fff;
@@ -160,7 +159,18 @@ a.classificacao-14 {
   a.classificacao-L {
     background:  green;
   }
-div {
-    display: flex;
-    flex-direction: row;
-}
+  .trailer-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #757575;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: #000000;
+  }
+  
+  .trailer-button:hover,
+   .trailer-button:active {
+    background-color: rgb(245, 92, 92);
+    color: white;
+  }
