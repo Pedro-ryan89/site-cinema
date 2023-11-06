@@ -6,50 +6,47 @@ document.addEventListener("DOMContentLoaded", function() {
     const exorcistaImage = document.querySelector(".filmes img[src='/img/filmes_templates/o-exorcista-o-devoto_46537_home.jpg']");
   
     // Função para criar uma página de filme
-    function createFilmePage(titulo, genero, duracao, classificacao, imgSrc) {
-      const main = document.querySelector("main");
-      main.innerHTML = ""; // Limpa o conteúdo atual do elemento main
+    function createFilmePage(titulo, genero, duracao, classificacao, imgSrc, trailerLink) {
+        const main = document.querySelector("main");
+        main.innerHTML = ""; // Limpa o conteúdo atual do elemento main
+    
+        // Cria um link para o arquivo CSS compartilhado
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.href = "/css/style.css"; // Nome do arquivo CSS compartilhado
+        document.head.appendChild(link);
+    
+        const h1 = document.createElement("h1");
+        h1.textContent = titulo;
+    
+        const section = document.createElement("section");
+        section.className = "filme";
+        section.innerHTML = `
+          <img src="${imgSrc}" alt="">
+          <ul>
+            <li>Gênero: <b>${genero}</b></li>
+            <li>Duração: <b>${duracao}</b></li>
+            <li>Classificação: <a class="classificacao-${classificacao}">${classificacao}</a></li>
+            <li><a class="trailer-button btn-${classificacao}" href="${trailerLink}">Assistir ao Trailer</a></li>
+          </ul>
+    `;
+
+    main.appendChild(h1);
+    main.appendChild(section);
+  }
   
-      // Cria um link para o arquivo CSS compartilhado
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
-      link.href = "/css/style.css"; // Nome do arquivo CSS compartilhado
-      document.head.appendChild(link);
-  
-      const h1 = document.createElement("h1");
-      h1.textContent = titulo;
-  
-      const section = document.createElement("section");
-      section.className = "filme";
-      section.innerHTML = `
-        <img src="${imgSrc}" alt="">
-        <ul>
-          <li>Gênero: <b>${genero}</b></li>
-          <li>Duração: <b>${duracao}</b></li>
-          <li>Classificação: <a class="classificacao-${classificacao}">${classificacao}</a></li>
-        </ul>
-      `;
-  
-      main.appendChild(h1);
-      main.appendChild(section);
-    }
-  
-    // Adiciona eventos de clique e efeito de cursor para as imagens dos filmes
-    fnafImage.addEventListener("mouseover", function() {
-      fnafImage.style.cursor = "pointer"; // Altera o cursor para indicar que é clicável
-    });
-  
-    fnafImage.addEventListener("click", function(event) {
-      event.preventDefault(); // Impede o comportamento padrão do link
-      createFilmePage(
-        "Five Nights at Freddy's - O Pesadelo Sem Fim",
-        "Terror",
-        "01h49",
-        "14",
-        "/img/filmes_templates/five-nights-at-freddys-o-pesadelo-sem-fim_46543_home.jpg"
-      );
-    });
+  fnafImage.addEventListener("click", function(event) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+    createFilmePage(
+      "Five Nights at Freddy's - O Pesadelo Sem Fim",
+      "Terror",
+      "01h49",
+      "14",
+      "/img/filmes_templates/five-nights-at-freddys-o-pesadelo-sem-fim_46543_home.jpg",
+      "https://exemplo.com/trailer_fnaf" // Link para o trailer de Five Nights at Freddy's
+    );
+  });
   
     oppenheimerImage.addEventListener("mouseover", function() {
       oppenheimerImage.style.cursor = "pointer"; // Altera o cursor para indicar que é clicável
@@ -96,4 +93,3 @@ document.addEventListener("DOMContentLoaded", function() {
       );
     });
   });
-  
