@@ -164,11 +164,9 @@ body{
         align-items: center;
         width: 80%;
     }
-    .filmes img {
-        width: 200px;
-    }
     .filme-imagem {
-        width: 100px;
+        height: 298px;
+        width: 198px;
         margin: 10px;
         margin-bottom: 20px;
         margin-right: 0;
