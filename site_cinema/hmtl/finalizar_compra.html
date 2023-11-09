@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/finalizar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/finalizar.js"></script>
     <title>Cinefilmes</title>
 </head>
 <body>
@@ -23,18 +25,52 @@
     <main>
         <section class="ingressos">
             <h2>Escolha seus ingressos:</h2>
-            <div class="panel" role="tabpanel">
-                <h4 class="panel-heading" id="LIST_INGTRAD" data-toggle="collapse" aria-expanded="true">
-                    <a role="button" aria-expanded="true" href="#TAB_INGTRAD">Ingressos Tradicionais</a>
-                    <span class="icon-up"></span>
-                </h4>
-                <h4 class="panel-title">
-                    <a role="button" aria-expanded="true" data-bind="text: category.fCapt">Ingressos Tradicionais</a>
-                    <span class="icon-up"></span>
-                </h4>
+            <button class="painel painel-ativo" id="painel">
+                <h4>Ingressos Tradicionais</h4>
+                <img class="icon-up" src="/img/186407_arrow_up_icon.png" alt="">
+                <img class="icon-down" src="/img/186411_arrow_down_icon.png" alt="">
+            </button>
+        
+            <div id="formulario">
+                <table>
+                    <tr>
+                        <th>Ingresso</th>
+                        <th>Quantidade</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td>Inteira
+                            <p>Ingresso: R$ 24,00</p>
+                        </td>
+                        <td>
+                            <select id="quantidadeInteira">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </td>
+                        <td><h4 id="precoTotalInteira">R$ 0</h4></td>
+                    </tr>
+                    <tr>
+                        <td>Meia
+                            <p>Ingresso: R$ 12,00</p>
+                        </td>
+                        <td>
+                            <select id="quantidadeMeia">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </td>
+                        <td><h4 id="precoTotalMeia">R$ 0</h4></td>
+                    </tr>
+                </table>
+                <p id="precoTotalGeral">Preço Total: R$ 0</p>
+                <a href="ingresso_comprado.html" class="continuar">Continuar</a>
             </div>
-            
         </section>
-    </main>
+    <script src="/js/finalizar.js"></script>
 </body>
 </html>
