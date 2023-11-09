@@ -209,4 +209,13 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
+    const horarioButtons = document.querySelectorAll('.horarios');
+
+    // Adicionando um evento de clique a cada botão de horário
+    horarioButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Redirecionar para a página de finalização da compra
+            window.location.href = '/hmtl/finalizar_compra.html';
+        });
+    });
 });
