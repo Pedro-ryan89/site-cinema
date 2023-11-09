@@ -108,3 +108,72 @@ body{
     color: #333333;
     width: 60%;
 }
+.painel {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background: #EBEBEB;
+    border-radius: 3px;
+    width: 100%;
+    padding: 4px 15px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+}
+.painel h4 {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #757575;
+    margin-left: auto;
+}
+.icon-up {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+}
+.icon-down {
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+}
+.painel-ativo {
+    background: rgb(245, 92, 92);
+}
+.painel-ativo h4 {
+    color: #fff;
+}
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+th:nth-child(3), td:nth-child(3) {
+    text-align: right;
+}
+select {
+    width: 120px;
+    height: 37px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+table p {
+    margin-top: 10px;
+    font-size: 11px;
+}
+table h4 {
+    font-size: 15px;
+    font-weight: normal;
+}
