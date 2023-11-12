@@ -1,76 +1,99 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/finalizar.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/finalizar.js"></script>
-    <title>Cinefilmes</title>
-</head>
-<body>
-    <header>
-        <div class="container_nav">
-            <h2>Cinefilmes</h2>
-            <nav>
-                <ul>
-                    <li><a href="pagina_filmes.html">Filmes em cartaz</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                    <li><a href="">Suporte</a></li>
-                    <li><a><img src="/img/navbar_img/bell_340665.png"></a></li>
-                </ul>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/finalizar.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Importa a biblioteca jQuery -->
+        <script src="/js/finalizar.js"></script>
+        <title>Cinefilmes</title>
+    </head>
+    <body>
+        <!-- Cabeçalho com logotipo e barra de navegação -->
+        <header>
+            <nav class="container_nav">
+                <!-- Logotipo -->
+                <h2>Cinefilmes</h2>
+                <!-- Barra de navegação -->
+                <nav>
+                    <ul>
+                        <!-- Links de navegação -->
+                        <li><a href="pagina_filmes.html">Filmes em cartaz</a></li>
+                        <li><a href="#">Sobre nós</a></li>
+                        <li><a href="#">Suporte</a></li>
+                    </ul>
+                </nav>
             </nav>
-        </div>
-    </header>
-    <main>
-        <section class="ingressos">
-            <h2>Escolha seus ingressos:</h2>
-            <button class="painel painel-ativo" id="painel">
-                <h4>Ingressos Tradicionais</h4>
-                <img class="icon-up" src="/img/186407_arrow_up_icon.png" alt="">
-                <img class="icon-down" src="/img/186411_arrow_down_icon.png" alt="">
-            </button>
-        
-            <div id="formulario">
-                <table>
-                    <tr>
-                        <th>Ingresso</th>
-                        <th>Quantidade</th>
-                        <th>Subtotal</th>
-                    </tr>
-                    <tr>
-                        <td>Inteira
-                            <p>Ingresso: R$ 24,00</p>
-                        </td>
-                        <td>
-                            <select id="quantidadeInteira">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </td>
-                        <td><h4 id="precoTotalInteira">R$ 0</h4></td>
-                    </tr>
-                    <tr>
-                        <td>Meia
-                            <p>Ingresso: R$ 12,00</p>
-                        </td>
-                        <td>
-                            <select id="quantidadeMeia">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select>
-                        </td>
-                        <td><h4 id="precoTotalMeia">R$ 0</h4></td>
-                    </tr>
-                </table>
-                <p id="precoTotalGeral">Preço Total: R$ 0</p>
-                <a href="ingresso_comprado.html" class="continuar">Continuar</a>
-            </div>
-        </section>
-    <script src="/js/finalizar.js"></script>
-</body>
-</html>
+        </header>
+        <!-- Seção principal -->
+        <main>
+            <section class="ingressos">
+                <!-- Título da seção -->
+                <h2>Escolha seus ingressos:</h2>
+                 <!-- Botão para mostrar/ocultar o painel de ingressos -->
+                <button class="painel painel-ativo" id="painel">
+                    <h4>Ingressos Tradicionais</h4>
+                    <img class="icon-up" src="/img/186407_arrow_up_icon.png" alt="">
+                    <img class="icon-down" src="/img/186411_arrow_down_icon.png" alt="">
+                </button>
+                <!-- Painel de seleção de ingressos -->
+                <form id="formulario">
+                    <table>
+                        <tr>
+                            <th>Ingresso</th>
+                            <th>Quantidade</th>
+                            <th>Subtotal</th>
+                        </tr>
+                        <!-- Linha para ingresso inteira -->
+                        <tr>
+                            <td>Inteira
+                                <p>Ingresso: R$ 24,00</p>
+                            </td>
+                            <td>
+                                <!-- Dropdown para escolher a quantidade -->
+                                <select id="quantidadeInteira">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                </select>
+                            </td>
+                            <td><h4 id="precoTotalInteira">R$ 0</h4></td>
+                        </tr>
+                        <!-- Linha para ingresso meia -->
+                        <tr>
+                            <td>Meia
+                                <p>Ingresso: R$ 12,00</p>
+                            </td>
+                            <td>
+                                <!-- Dropdown para escolher a quantidade -->
+                                <select id="quantidadeMeia">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                </select>
+                            </td>
+                            <td><h4 id="precoTotalMeia">R$ 0</h4></td>
+                        </tr>
+                    </table>
+                </form>
+                <!-- Informações sobre o subtotal e o total a pagar -->
+                    <p id="subTotal">SUBTOTAL: R$ 0</p>
+                    <div id="linha"></div>
+                    <p id="precoTotalGeral">TOTAL A PAGAR: R$ 0</p>
+                    <!-- Botões para continuar ou voltar -->
+                    <a href="ingresso_comprado.html"><button class="continuar">Continuar</button></a>
+                    <a href="javascript:history.back()" class="botao-voltar">Escolher outro horário</a>
+            </section>
+    </body>
+    </html>
