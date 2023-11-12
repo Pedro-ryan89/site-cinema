@@ -1,33 +1,39 @@
-$(document).ready(function() {
+// Aguarda até que a página esteja totalmente carregada
+$(document).ready(function () {
+    // Seleção de elementos do HTML "finalizar_compra" usando jQuery
     const painel = $("#painel");
     const formulario = $("#formulario");
     const quantidadeInteira = $("#quantidadeInteira");
     const quantidadeMeia = $("#quantidadeMeia");
     const precoTotalInteira = $("#precoTotalInteira");
     const precoTotalMeia = $("#precoTotalMeia");
+    const subTotal = $("#subTotal");
     const precoTotalGeral = $("#precoTotalGeral");
     const iconUp = $(".icon-up");
     const iconDown = $(".icon-down");
-
+    const botaoContinuar = $(".continuar");
+    
+    // Variável para rastrear se o formulário está visível
     let formularioVisivel = true;
 
+    // Função para abrir o painel (formulário)
     function abrirPainel() {
-        formulario.slideDown();
-        iconUp.css("display", "inline");
-        iconDown.css("display", "none");
-        painel.addClass("painel-ativo");
+        formulario.slideDown(); // Mostra o formulário com uma animação de deslize para baixo
+        iconUp.css("display", "inline"); // Mostra o ícone para cima
+        iconDown.css("display", "none"); // Oculta o ícone para baixo
+        painel.addClass("painel-ativo"); // Adiciona uma classe para estilização ativa
         formularioVisivel = true;
     }
-
+    // Função para fechar o painel (formulário)
     function fecharPainel() {
-        formulario.slideUp();
-        iconUp.css("display", "none");
-        iconDown.css("display", "inline");
-        painel.removeClass("painel-ativo");
+        formulario.slideUp(); // Oculta o formulário com uma animação de deslize para cima
+        iconUp.css("display", "none"); // Oculta o ícone para cima
+        iconDown.css("display", "inline"); // Mostra o ícone para baixo
+        painel.removeClass("painel-ativo"); // Remove a classe para estilização ativa
         formularioVisivel = false;
     }
-
-    painel.on("click", function() {
+    // Adiciona um manipulador de eventos para alternar entre abrir e fechar o painel ao clicar nele
+    painel.on("click", function () {
         if (formularioVisivel) {
             fecharPainel();
         } else {
@@ -38,21 +44,37 @@ $(document).ready(function() {
     // Abra o painel suavemente ao carregar a página
     abrirPainel();
 
+    // Função para atualizar os preços e subtotal com base nas quantidades selecionadas
     function atualizarPreco() {
-        const precoInteira = 50; // Preço da inteira
-        const precoMeia = 25; // Preço da meia
+        const precoInteira = 24; // Preço da inteira
+        const precoMeia = 12; // Preço da meia
         const quantidadeInteiraValue = parseInt(quantidadeInteira.val());
         const quantidadeMeiaValue = parseInt(quantidadeMeia.val());
 
+        // Calcula os preços totais e subtotal
         const precoTotalInteiraValue = precoInteira * quantidadeInteiraValue;
         const precoTotalMeiaValue = precoMeia * quantidadeMeiaValue;
+        const subTotalValue = precoTotalInteiraValue + precoTotalMeiaValue;
         const precoTotalGeralValue = precoTotalInteiraValue + precoTotalMeiaValue;
 
+        // Atualiza os textos nos elementos HTML correspondentes
         precoTotalInteira.text("R$ " + precoTotalInteiraValue);
         precoTotalMeia.text("R$ " + precoTotalMeiaValue);
-        precoTotalGeral.text("Preço Total: R$ " + precoTotalGeralValue);
+        subTotal.text("SUBTOTAL: R$ " + subTotalValue);
+        precoTotalGeral.text("TOTAL A PAGAR: R$ " + precoTotalGeralValue);
+
+        // Verificar se ambas as quantidades são iguais a zero
+        const desativarBotao = quantidadeInteiraValue === 0 && quantidadeMeiaValue === 0;
+
+        // Ativar ou desativar o botão "Continuar" e estilizá-lo conforme necessário
+        botaoContinuar.prop("disabled", desativarBotao);
+        botaoContinuar.toggleClass("botao-desativado", desativarBotao);
     }
 
+    // Inicializar o botão "Continuar" como desativado
+    atualizarPreco();
+
+    // Adicionar manipuladores de eventos para atualizar o botão quando a quantidade muda
     quantidadeInteira.on("input", atualizarPreco);
     quantidadeMeia.on("input", atualizarPreco);
 });
