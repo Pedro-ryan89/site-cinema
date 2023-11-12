@@ -97,7 +97,10 @@ body{
 
 .conclusao-compra {
     text-align: center;
-    padding: 300px;
+    padding-top: 195px;
+    padding-bottom: 260px;
+    padding-left: 300px;
+    padding-right: 300px;
     background-color: rgb(245, 92, 92);
     color: #fff;
 }
