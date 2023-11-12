@@ -2,7 +2,7 @@
 
 
 
-/*global*/
+/* Regras globais */
 
 * {
     margin: 0;
@@ -22,18 +22,20 @@ main{
     padding-left: 100px;
     padding-top: 20px;
 }
-
+/* Estilo do body */
 body{
-    background-color: #EBEBEB;
-    
+    background-color: aliceblue;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
 /*começo da navbar*/
 
 
-
 /* Navbar */
+
+/* Estilo do navbar */
 .container_nav {
     background: linear-gradient(to right, rgb(45, 45, 52), #000000);
     padding: 10px;
@@ -41,13 +43,13 @@ body{
     flex-direction: column; /* Configura a direção da flexbox para coluna */
     align-items: center; /* Centraliza verticalmente */
 }
-
+/* Estilo do logotipo e do navbar */
 .container_nav h2 {
     color: rgb(245, 92, 92);
     font-size: 50px;
     margin-bottom: 10px; /* Adiciona uma margem inferior para afastar o título da lista */
 }
-
+/* Estilo da lista do navbar */
 .container_nav nav ul {
     list-style: none;
     display: flex;
@@ -92,7 +94,7 @@ body{
     width: 30px;
     height: 30px;
     margin-right: 5px;
-    transform: rotate(0deg); /* Ajuste o ângulo da rotação conforme necessário */
+    transform: rotate(0deg);
 }
 
 
@@ -100,7 +102,7 @@ body{
 
 
 /*começo do painel de filmes*/
-
+/* Estilo do painel de filmes */
 .filme-info{
     display: flex;
     flex-direction: row;
@@ -206,6 +208,7 @@ main h1{
   }
 
   @media screen and (max-width: 767px) {
+    /* Estilo específico para telas menores que 767px */
     filme{
         display: flex;
         flex-direction: column;
@@ -215,7 +218,7 @@ main h1{
     }
 }
 
-.teste {
+.secoes {
     display: flex;
     flex-direction: row;
     padding-top: 25px;
@@ -328,7 +331,7 @@ main h1{
     margin-right: 10px;
 }
 .horarios button:hover {
-    background-color: rgb(250, 55, 55);;
+    background-color: rgb(250, 55, 55);
 }
 .horarios button.ativo {
     background-color: rgb(250, 55, 55);
