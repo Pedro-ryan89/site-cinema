@@ -2,7 +2,7 @@
 
 
 
-/*global*/
+/* Regras globais */
 
 * {
     margin: 0;
@@ -22,7 +22,7 @@ main{
     padding-left: 100px;
     padding-top: 20px;
 }
-
+/* Estilo do body */
 body{
     background-color: aliceblue;
     overflow-x: hidden;
@@ -35,7 +35,7 @@ body{
 
 /* Navbar */
 
-/* Navbar */
+/* Estilo do navbar */
 .container_nav {
     background: linear-gradient(to right, rgb(45, 45, 52), #000000);
     padding: 10px;
@@ -43,13 +43,13 @@ body{
     flex-direction: column; /* Configura a direção da flexbox para coluna */
     align-items: center; /* Centraliza verticalmente */
 }
-
+/* Estilo do logotipo e do navbar */
 .container_nav h2 {
     color: rgb(245, 92, 92);
     font-size: 50px;
     margin-bottom: 10px; /* Adiciona uma margem inferior para afastar o título da lista */
 }
-
+/* Estilo da lista do navbar */
 .container_nav nav ul {
     list-style: none;
     display: flex;
@@ -100,6 +100,25 @@ body{
 
 /*fim nav bar*/
 
+/* Media query para telas menores (max-width: 660px) */
+@media (max-width: 660px) {
+    table, th, td {
+        display: block;
+    }
+
+    th, td {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    
+    th, td {
+        border: none;
+        padding: 8px; 
+        text-align: center;
+    }
+}
+
 .ingressos {
     padding: 15px;
     margin-top: 20px;
@@ -107,6 +126,7 @@ body{
     background-color: white;
     color: #333333;
     width: 60%;
+    height: auto;
 }
 .painel {
     display: flex;
@@ -146,9 +166,13 @@ body{
 .painel-ativo h4 {
     color: #fff;
 }
+#formulario {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 0 15px;
+}
 table {
     width: 100%;
-    margin-bottom: 20px;
     border-collapse: collapse;
 }
 th, td {
@@ -176,4 +200,44 @@ table p {
 table h4 {
     font-size: 15px;
     font-weight: normal;
+}
+#linha {
+    border-top: 1px solid #ccc;
+}
+#subTotal {
+    color: #333333;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: right;
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+#precoTotalGeral {
+    margin-top: 15px;
+    color: #333333;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: right;
+}
+.continuar {
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(245, 92, 92);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    float: right;
+}
+.continuar:hover {
+    background-color: rgb(250, 55, 55);
+}
+.botao-desativado {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+.botao-voltar {
+    font-size: 14px;
 }
