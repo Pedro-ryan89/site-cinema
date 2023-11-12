@@ -6,26 +6,36 @@
     <title>Filme</title>
 </head>
 <body>
+    <!-- Cabeçalho com logotipo e barra de navegação -->
     <header>
         <div class="container_nav">
+            <!-- Logotipo -->
             <h2>Cinefilmes</h2>
+            <!-- Barra de navegação -->
             <nav>
                 <ul>
+                    <!-- Links de navegação -->
                     <li><a href="pagina_filmes.html">Filmes em cartaz</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                    <li><a href="">Suporte</a></li>
-                    <li><a><img src="/img/navbar_img/bell_340665.png"></a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Suporte</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <!-- Seção principal -->
     <main>
+        <!-- Título do Filme (selecionado no js) -->
         <h1 id="filme-titulo">Título do Filme</h1>
-        <section class="teste">
+        <!-- Seção com imagem do filme, datas e horários (selecionados no js) -->
+        <section class="secoes">
+            <!-- Imagem do filme -->
             <img id="filme-imagem" src="" alt="">
             <div class="datas">
+                <!-- Título para escolha de datas -->
                 <h3>Escolha uma data para assistir o filme:</h3>
+                 <!-- Botões para diferentes dias -->
                 <section class="botoes-dias">
+                    <!-- Botão para o dia 01 -->
                     <button data-target="dia-01">
                         <ul>
                             <li>TER</li>
@@ -33,6 +43,7 @@
                             <li>NOV</li>
                         </ul>
                     </button>
+                    <!-- Botão para o dia 02 -->
                     <button data-target="dia-02">
                         <ul>
                             <li>QUA</li>
@@ -40,6 +51,7 @@
                             <li>NOV</li>
                         </ul>
                     </button>
+                    <!-- Botão para o dia 03 -->
                     <button data-target="dia-03">
                         <ul>
                             <li>QUI</li>
@@ -47,6 +59,7 @@
                             <li>NOV</li>
                         </ul>
                     </button>
+                    <!-- Botão para o dia 04 -->
                     <button data-target="dia-04">
                         <ul>
                             <li>SEX</li>
@@ -54,6 +67,7 @@
                             <li>NOV</li>
                         </ul>
                     </button>
+                    <!-- Botão para o dia 05 -->
                     <button data-target="dia-05">
                         <ul>
                             <li>SÁB</li>
@@ -61,6 +75,7 @@
                             <li>NOV</li>
                         </ul>
                     </button>
+                    <!-- Botão para o dia 06 -->
                     <button data-target="dia-06">
                         <ul>
                             <li>DOM</li>
@@ -69,7 +84,7 @@
                         </ul>
                     </button>
                 </section>
-                
+                <!-- Seções para diferentes salas de ingressos -->
                 <section id="sala-01-ingressos" class="ingressos">
                     <h4></h4>
                     <h5></h5>
@@ -113,11 +128,13 @@
                 </section>            
             </div>
         </section>
+        <!-- Seção com informações sobre o filme (estão no js) -->
         <section class="filme-info">
             <ul>
-                <li>Gênero: <b><span id="filme-genero"></span></b></li>
-                <li>Duração: <b><span id="filme-duracao"></span></b></li>
-                <li>Classificação: <span id="filme-classificacao" class="classificacao"></span></li>
+                <!-- Informações como gênero, duração, classificação e link para o trailer (estão no js) -->
+                <li>Gênero: <b><strong id="filme-genero"></strong></b></li>
+                <li>Duração: <b><time id="filme-duracao"></time></b></li>
+                <li>Classificação: <strong id="filme-classificacao" class="classificacao"></strong></li>
                 <li><a id="filme-trailer" class="trailer-button" href="" target="_blank">Assistir ao Trailer</a></li>
             </ul>
         </section>
