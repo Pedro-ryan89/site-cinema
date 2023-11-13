@@ -97,6 +97,21 @@ body{
     transform: rotate(0deg); /* Ajuste o ângulo da rotação conforme necessário */
 }
 
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_nav li {
+        margin: 10px 0;
+    }
+}
 
 /*fim nav bar*/
 
@@ -219,6 +234,12 @@ table h4 {
     font-size: 17px;
     text-align: right;
 }
+.contvolt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 .continuar {
     padding: 10px 18px;
     font-size: 14px;
@@ -228,8 +249,7 @@ table h4 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin: 10px;
-    float: right;
+    margin: 10px;  
 }
 .continuar:hover {
     background-color: rgb(250, 55, 55);
@@ -240,6 +260,18 @@ table h4 {
 }
 .botao-voltar {
     font-size: 14px;
+}
+
+@media (max-width: 820px) {
+    .contvolt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .continuar {
+        width: 90%;
+        text-align: center;
+    }
 }
 /* Adicionei o estilo inline para simplificar, mas você pode manter no seu arquivo CSS */
 .mapa-poltronas {
@@ -260,20 +292,26 @@ table h4 {
 .fechar-mapa-btn {
     margin-top: 10px;
     padding: 8px 12px;
-    background-color: #007BFF;
+    background-color: #337ab7;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
-/* Estilo para as poltronas */
-.poltrona {
-    width: 20px;
-    height: 20px;
-    background-color: #ddd;
-    border-radius: 50%;
+.letra-container {
     display: inline-block;
-    margin: 5px;
+    margin-right: 10px;
+}
+
+.poltrona {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    text-align: center;
+    line-height: 25px;
+    margin: 2px;
     cursor: pointer;
 }
 
@@ -301,4 +339,14 @@ table h4 {
     max-height: 80%;
     overflow: auto;
     z-index: 1001; /* Garante que o mapa esteja acima da sobreposição */
+}
+.letras li {
+    margin-right: 10px;
+    background-color: rgba(238, 238, 238, 0.796);
+    border-radius: 3px;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 11px;
 }
