@@ -26,117 +26,119 @@
     <main>
         <!-- Título do Filme (selecionado no js) -->
         <h1 id="filme-titulo">Título do Filme</h1>
-        <!-- Seção com imagem do filme, datas e horários (selecionados no js) -->
-        <section class="secoes">
-            <!-- Imagem do filme -->
-            <img id="filme-imagem" src="" alt="">
-            <div class="datas">
-                <!-- Título para escolha de datas -->
-                <h3>Escolha uma data para assistir o filme:</h3>
-                 <!-- Botões para diferentes dias -->
-                <section class="botoes-dias">
-                    <!-- Botão para o dia 01 -->
-                    <button data-target="dia-01">
-                        <ul>
-                            <li>TER</li>
-                            <li>14</li>
-                            <li>NOV</li>
-                        </ul>
-                    </button>
-                    <!-- Botão para o dia 02 -->
-                    <button data-target="dia-02">
-                        <ul>
-                            <li>QUA</li>
-                            <li>15</li>
-                            <li>NOV</li>
-                        </ul>
-                    </button>
-                    <!-- Botão para o dia 03 -->
-                    <button data-target="dia-03">
-                        <ul>
-                            <li>QUI</li>
-                            <li>16</li>
-                            <li>NOV</li>
-                        </ul>
-                    </button>
-                    <!-- Botão para o dia 04 -->
-                    <button data-target="dia-04">
-                        <ul>
-                            <li>SEX</li>
-                            <li>17</li>
-                            <li>NOV</li>
-                        </ul>
-                    </button>
-                    <!-- Botão para o dia 05 -->
-                    <button data-target="dia-05">
-                        <ul>
-                            <li>SÁB</li>
-                            <li>18</li>
-                            <li>NOV</li>
-                        </ul>
-                    </button>
-                    <!-- Botão para o dia 06 -->
-                    <button data-target="dia-06">
-                        <ul>
-                            <li>DOM</li>
-                            <li>19</li>
-                            <li>NOV</li>
-                        </ul>
-                    </button>
-                </section>
-                <!-- Seções para diferentes salas de ingressos -->
-                <section id="sala-01-ingressos" class="ingressos">
-                    <h4></h4>
-                    <h5></h5>
-                    <section class="horarios">
+        <section class="principal">
+            <!-- Seção com informações sobre o filme (estão no js) -->
+            <section class="filme-info">
+                <!-- Imagem do filme -->
+                <img id="filme-imagem" src="" alt="">
+                <ul>
+                    <!-- Informações como gênero, duração, classificação e link para o trailer (estão no js) -->
+                    <li>Gênero: <b><strong id="filme-genero"></strong></b></li>
+                    <li>Duração: <b><time id="filme-duracao"></time></b></li>
+                    <li>Classificação: <strong id="filme-classificacao" class="classificacao"></strong></li>
+                    <li><a id="filme-trailer" class="trailer-button" href="" target="_blank">Assistir ao Trailer</a></li>
+                </ul>
+            </section>
+            <!-- Seção com imagem do filme, datas e horários (selecionados no js) -->
+            <section class="secoes">
+                <div class="datas">
+                    <!-- Título para escolha de datas -->
+                    <h3>Escolha uma data para assistir o filme:</h3>
+                    <!-- Botões para diferentes dias -->
+                    <section class="botoes-dias">
+                        <!-- Botão para o dia 01 -->
+                        <button data-target="dia-01">
+                            <ul>
+                                <li>TER</li>
+                                <li>14</li>
+                                <li>NOV</li>
+                            </ul>
+                        </button>
+                        <!-- Botão para o dia 02 -->
+                        <button data-target="dia-02">
+                            <ul>
+                                <li>QUA</li>
+                                <li>15</li>
+                                <li>NOV</li>
+                            </ul>
+                        </button>
+                        <!-- Botão para o dia 03 -->
+                        <button data-target="dia-03">
+                            <ul>
+                                <li>QUI</li>
+                                <li>16</li>
+                                <li>NOV</li>
+                            </ul>
+                        </button>
+                        <!-- Botão para o dia 04 -->
+                        <button data-target="dia-04">
+                            <ul>
+                                <li>SEX</li>
+                                <li>17</li>
+                                <li>NOV</li>
+                            </ul>
+                        </button>
+                        <!-- Botão para o dia 05 -->
+                        <button data-target="dia-05">
+                            <ul>
+                                <li>SÁB</li>
+                                <li>18</li>
+                                <li>NOV</li>
+                            </ul>
+                        </button>
+                        <!-- Botão para o dia 06 -->
+                        <button data-target="dia-06">
+                            <ul>
+                                <li>DOM</li>
+                                <li>19</li>
+                                <li>NOV</li>
+                            </ul>
+                        </button>
                     </section>
-                </section>
-                
-                <section id="sala-02-ingressos" class="ingressos">
-                    <h4></h4>
-                    <h5></h5>
-                    <section class="horarios">
+                    <!-- Seções para diferentes salas de ingressos -->
+                    <section id="sala-01-ingressos" class="ingressos">
+                        <h4></h4>
+                        <h5></h5>
+                        <section class="horarios">
+                        </section>
                     </section>
-                </section>
-                
-                <section id="sala-03-ingressos" class="ingressos">
-                    <h4></h4>
-                    <h5></h5>
-                    <section class="horarios">
+                    
+                    <section id="sala-02-ingressos" class="ingressos">
+                        <h4></h4>
+                        <h5></h5>
+                        <section class="horarios">
+                        </section>
                     </section>
-                </section>
-                
-                <section id="sala-04-ingressos" class="ingressos">
-                    <h4></h4>
-                    <h5></h5>
-                    <section class="horarios">
+                    
+                    <section id="sala-03-ingressos" class="ingressos">
+                        <h4></h4>
+                        <h5></h5>
+                        <section class="horarios">
+                        </section>
                     </section>
-                </section>
+                    
+                    <section id="sala-04-ingressos" class="ingressos">
+                        <h4></h4>
+                        <h5></h5>
+                        <section class="horarios">
+                        </section>
+                    </section>
 
-                <section id="sala-05-ingressos" class="ingressos">
-                    <h4></h4>
-                    <h5></h5>
-                    <section class="horarios">
+                    <section id="sala-05-ingressos" class="ingressos">
+                        <h4></h4>
+                        <h5></h5>
+                        <section class="horarios">
+                        </section>
                     </section>
-                </section>
 
-                <section id="sala-06-ingressos" class="ingressos">
-                    <h4></h4>
-                    <h5></h5>
-                    <section class="horarios">
-                    </section>
-                </section>            
-            </div>
-        </section>
-        <!-- Seção com informações sobre o filme (estão no js) -->
-        <section class="filme-info">
-            <ul>
-                <!-- Informações como gênero, duração, classificação e link para o trailer (estão no js) -->
-                <li>Gênero: <b><strong id="filme-genero"></strong></b></li>
-                <li>Duração: <b><time id="filme-duracao"></time></b></li>
-                <li>Classificação: <strong id="filme-classificacao" class="classificacao"></strong></li>
-                <li><a id="filme-trailer" class="trailer-button" href="" target="_blank">Assistir ao Trailer</a></li>
-            </ul>
+                    <section id="sala-06-ingressos" class="ingressos">
+                        <h4></h4>
+                        <h5></h5>
+                        <section class="horarios">
+                        </section>
+                    </section>            
+                </div>
+            </section>
         </section>
     </main>
     <script src="/js/filme.js"></script>
