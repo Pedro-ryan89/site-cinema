@@ -77,4 +77,41 @@ $(document).ready(function () {
     // Adicionar manipuladores de eventos para atualizar o botão quando a quantidade muda
     quantidadeInteira.on("input", atualizarPreco);
     quantidadeMeia.on("input", atualizarPreco);
+
+    // Função para mostrar a sobreposição com o mapa de poltronas
+    function mostrarMapaPoltronas() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('mapa-poltronas').style.display = 'block';
+        criarPoltronas();
+    }
+
+    // Função para ocultar a sobreposição e o mapa de poltronas
+    function fecharMapaPoltronas() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('mapa-poltronas').style.display = 'none';
+        limparPoltronas();
+    }
+
+    // Adiciona um ouvinte de eventos ao botão "Continuar"
+    document.getElementById('continuar-btn').addEventListener('click', mostrarMapaPoltronas);
+
+    // Adiciona um ouvinte de eventos ao botão "Fechar" no mapa de poltronas
+    document.getElementById('fechar-mapa').addEventListener('click', fecharMapaPoltronas);
+
+    // Função para criar as poltronas no mapa
+    function criarPoltronas() {
+        var poltronasContainer = document.getElementById('poltronas-container');
+        for (var i = 1; i <= 216; i++) {
+            var poltrona = document.createElement('div');
+            poltrona.className = 'poltrona';
+            poltrona.textContent = i;
+            poltronasContainer.appendChild(poltrona);
+        }
+    }
+
+    // Função para limpar as poltronas quando o mapa é fechado
+    function limparPoltronas() {
+        var poltronasContainer = document.getElementById('poltronas-container');
+        poltronasContainer.innerHTML = ''; // Remove todas as poltronas
+    }
 });
