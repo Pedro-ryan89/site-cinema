@@ -97,6 +97,22 @@ body{
     transform: rotate(0deg); /* Ajuste o ângulo da rotação conforme necessário */
 }
 
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_nav li {
+        margin: 10px 0;
+    }
+}
+
 
 /*fim nav bar*/
 
