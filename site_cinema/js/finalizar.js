@@ -98,14 +98,33 @@ $(document).ready(function () {
     // Adiciona um ouvinte de eventos ao botão "Fechar" no mapa de poltronas
     document.getElementById('fechar-mapa').addEventListener('click', fecharMapaPoltronas);
 
-    // Função para criar as poltronas no mapa
+    
+    // Função para criar as poltronas no mapa com base na distribuição proposta
     function criarPoltronas() {
         var poltronasContainer = document.getElementById('poltronas-container');
-        for (var i = 1; i <= 216; i++) {
-            var poltrona = document.createElement('div');
-            poltrona.className = 'poltrona';
-            poltrona.textContent = i;
-            poltronasContainer.appendChild(poltrona);
+        var letras = document.querySelectorAll('.letras li');
+        var poltronasPorLetra = [18, 18, 18, 18, 18, 12, 6, 6, 6, 6, 6, 6]; // Distribuição proposta
+
+        for (var i = 0; i < letras.length; i++) {
+            var letra = letras[i].textContent.charAt(0);
+            var quantidadePoltronas = poltronasPorLetra[i];
+
+            var letraContainer = document.createElement('div');
+            letraContainer.className = 'letra-container';
+            letraContainer.textContent = letra;
+
+            var poltronasCirculo = document.createElement('div');
+            poltronasCirculo.className = 'poltronas-circulo';
+
+            for (var j = 1; j <= quantidadePoltronas; j++) {
+                var poltrona = document.createElement('div');
+                poltrona.className = 'poltrona';
+                poltrona.textContent = j;
+                poltronasCirculo.appendChild(poltrona);
+            }
+
+            letraContainer.appendChild(poltronasCirculo);
+            poltronasContainer.appendChild(letraContainer);
         }
     }
 
