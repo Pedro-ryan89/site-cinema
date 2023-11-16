@@ -288,10 +288,8 @@ table h4 {
 
 /* Adicionei um estilo para o botão dentro do mapa de poltronas */
 .fechar-mapa {
-    display: flex;
-    margin-left: 90%;
     margin-top: 10px;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     padding: 8px 12px;
     background-color: #007BFF;
     color: #fff;
@@ -311,8 +309,12 @@ table h4 {
     border-radius: 50%;
     margin: 5px;
     cursor: pointer;
+    
+
 }
+
 .poltrona:hover {
+    
     border: 3px solid #337ab7;
 }
 
@@ -327,6 +329,7 @@ table h4 {
     background: rgba(0, 0, 0, 0.7); /* Cor de fundo escura com transparência */
     z-index: 1000; /* Garante que a sobreposição esteja acima de outros elementos */
 }
+
 .finalizar {
     padding: 10px 10px;
     font-size: 14px;
@@ -338,6 +341,7 @@ table h4 {
     cursor: pointer;
     margin-top: 10px;
 }
+
 .finalizar:hover {
     background-color: rgb(250, 55, 55);
 }
