@@ -279,40 +279,41 @@ table h4 {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate( -50%, -50%);
     background: #fff; /* Cor de fundo do mapa */
     padding: 20px;
-    max-width: 80%;
-    max-height: 80%;
     overflow: auto;
     z-index: 1001; /* Garante que o mapa esteja acima da sobreposição */
 }
 
 /* Adicionei um estilo para o botão dentro do mapa de poltronas */
-.fechar-mapa-btn {
+.fechar-mapa {
+    display: flex;
+    margin-left: 90%;
     margin-top: 10px;
+    margin-bottom: 60px;
     padding: 8px 12px;
-    background-color: #337ab7;
+    background-color: #007BFF;
     color: #fff;
     border: none;
     cursor: pointer;
 }
 
-.letra-container {
-    display: inline-block;
-    margin-right: 10px;
-}
-
+/* Estilo para as poltronas */
 .poltrona {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-color: #ccc;
-    border: 1px solid #aaa;
-    text-align: center;
-    line-height: 25px;
-    margin: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(70, 185, 70);
+    color: #fff;
+    font-weight: bold;
+    font-size: 10px;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
     cursor: pointer;
+}
+.poltrona:hover {
+    border: 3px solid #337ab7;
 }
 
 /* Estilo para a sobreposição */
@@ -326,27 +327,17 @@ table h4 {
     background: rgba(0, 0, 0, 0.7); /* Cor de fundo escura com transparência */
     z-index: 1000; /* Garante que a sobreposição esteja acima de outros elementos */
 }
-
-/* Estilo para o mapa de poltronas */
-.mapa-poltronas {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff; /* Cor de fundo do mapa */
-    padding: 20px;
-    max-width: 80%;
-    max-height: 80%;
-    overflow: auto;
-    z-index: 1001; /* Garante que o mapa esteja acima da sobreposição */
+.finalizar {
+    padding: 10px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(245, 92, 92);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
 }
-.letras li {
-    margin-right: 10px;
-    background-color: rgba(238, 238, 238, 0.796);
-    border-radius: 3px;
-    text-align: center;
-    width: 22px;
-    height: 22px;
-    line-height: 22px;
-    font-size: 11px;
+.finalizar:hover {
+    background-color: rgb(250, 55, 55);
 }
