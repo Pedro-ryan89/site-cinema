@@ -78,11 +78,31 @@ $(document).ready(function () {
     quantidadeInteira.on("input", atualizarPreco);
     quantidadeMeia.on("input", atualizarPreco);
 
-    // Função para mostrar a sobreposição com o mapa de poltronas
+    // Função para marcar a poltrona como selecionada ao clicar nela
+    $('#poltronas-container').on('click', '.poltrona', function() {
+        $(this).toggleClass('poltrona-selecionada');
+        verificarPoltronasSelecionadas(); // Verifica se há poltronas selecionadas ao clicar em uma poltrona
+    });
+
+    // Função para verificar se há pelo menos uma poltrona selecionada
+    function verificarPoltronasSelecionadas() {
+        const poltronasSelecionadas = $('.poltrona-selecionada').length > 0;
+        // Habilita ou desabilita o botão "Finalizar" com base na presença de poltronas selecionadas
+        botaoContinuar.prop('disabled', !poltronasSelecionadas);
+        // Adiciona ou remove uma classe de estilo ao botão "Finalizar" conforme necessário
+        botaoContinuar.toggleClass('botao-desativado', !poltronasSelecionadas);
+    }
+
     function mostrarMapaPoltronas() {
-        document.getElementById('overlay').style.display = 'block';
-        document.getElementById('mapa-poltronas').style.display = 'block';
-        criarPoltronas();
+        const quantidadeInteiraValue = parseInt(quantidadeInteira.val());
+        const quantidadeMeiaValue = parseInt(quantidadeMeia.val());
+
+        // Verifica se há pelo menos um ingresso selecionado na inteira ou meia
+        if (quantidadeInteiraValue > 0 || quantidadeMeiaValue > 0) {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('mapa-poltronas').style.display = 'block';
+            criarPoltronas();
+        }
     }
 
     // Função para ocultar a sobreposição e o mapa de poltronas
@@ -115,4 +135,47 @@ $(document).ready(function () {
         var poltronasContainer = document.getElementById('poltronas-container');
         poltronasContainer.innerHTML = ''; // Remove todas as poltronas
     }
+    // Evento de clique no botão "Finalizar"
+    $('#finalizar').on('click', function(event) {
+        // Verifica se há pelo menos uma poltrona selecionada
+        const poltronasSelecionadas = $('.poltrona-selecionada').length > 0;
+
+        // Se não houver poltronas selecionadas, cancela o comportamento padrão do botão
+        if (!poltronasSelecionadas) {
+            event.preventDefault(); // Impede o comportamento padrão do botão (não segue o link)
+            alert('Por favor, selecione pelo menos uma poltrona.');
+        } else {
+            // Se houver poltronas selecionadas, segue para o link especificado
+            // window.location.href = "ingresso_comprado.html"; // Descomente essa linha para redirecionar para o link
+            // Você pode descomentar a linha acima para redirecionar para o link desejado
+        }
+    });
+    // Função para verificar poltronas selecionadas com base nos ingressos comprados
+    function verificarPoltronasSelecionadas() {
+        const quantidadeInteiraValue = parseInt(quantidadeInteira.val());
+        const quantidadeMeiaValue = parseInt(quantidadeMeia.val());
+        const totalIngressos = quantidadeInteiraValue + quantidadeMeiaValue;
+
+        // Desabilita as poltronas se a quantidade de ingressos ainda não foi selecionada
+        $('.poltrona').prop('disabled', false); // Habilita todas as poltronas primeiro
+        const poltronasSelecionadas = $('.poltrona-selecionada').length;
+
+        // Desabilita as poltronas se a quantidade de poltronas selecionadas for igual ao total de ingressos
+        if (poltronasSelecionadas === totalIngressos) {
+            $('.poltrona:not(.poltrona-selecionada)').prop('disabled', true);
+        }
+    }
+
+    // Resto do seu código...
+
+    // Adicione chamadas para verificar as poltronas selecionadas sempre que a seleção de ingressos for alterada
+    quantidadeInteira.on("input", function() {
+        atualizarPreco();
+        verificarPoltronasSelecionadas();
+    });
+
+    quantidadeMeia.on("input", function() {
+        atualizarPreco();
+        verificarPoltronasSelecionadas();
+    });
 });
