@@ -330,7 +330,7 @@ table h4 {
     z-index: 1000; /* Garante que a sobreposição esteja acima de outros elementos */
 }
 
-.finalizar {
+#finalizar {
     padding: 10px 10px;
     font-size: 14px;
     font-weight: bold;
@@ -342,6 +342,11 @@ table h4 {
     margin-top: 10px;
 }
 
-.finalizar:hover {
+#finalizar:hover {
     background-color: rgb(250, 55, 55);
+}
+/* Estilo para quando a poltrona está selecionada */
+.poltrona-selecionada {
+    background-color: white; 
+    color: #000000;
 }
