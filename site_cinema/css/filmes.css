@@ -19,7 +19,7 @@ ul {
 }
 
 main{
-    padding-left: 100px;
+    padding-left:20px;
     padding-top: 20px;
 }
 /* Estilo do body */
@@ -43,12 +43,14 @@ body{
     flex-direction: column; /* Configura a direção da flexbox para coluna */
     align-items: center; /* Centraliza verticalmente */
 }
+
 /* Estilo do logotipo e do navbar */
 .container_nav h2 {
     color: rgb(245, 92, 92);
-    font-size: 50px;
+    font-size: 2rem;
     margin-bottom: 10px; /* Adiciona uma margem inferior para afastar o título da lista */
 }
+
 /* Estilo da lista do navbar */
 .container_nav nav ul {
     list-style: none;
@@ -87,42 +89,18 @@ body{
     background-color: rgb(156, 8, 8); /* Defina a cor da linha quando o mouse passar por cima */
 }
 
-
-
-
 .container_nav nav ul li a img {
     width: 30px;
     height: 30px;
     margin-right: 5px;
-    transform: rotate(0deg); /* Ajuste o ângulo da rotação conforme necessário */
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container_nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container_nav li {
-        margin: 10px 0;
-    }
+    transform: rotate(0deg);
 }
 
 
-/*fim nav bar*/
-
-
-/*começo do painel de filmes*/
-
-/* Estilo da seção de filmes */
 .filmes{
     display: flex;
     padding-top: 50px;
+    padding-left: 70px;
     width: 1362px; 
     justify-content: inherit;
     align-items: center; /* Adiciona alinhamento vertical ao centro */
@@ -144,21 +122,6 @@ body{
 .carrossel img {
     max-width: 100%;
 }
-/* Estilo responsivo para larguras de tela maiores */
-@media screen and (min-width: 1470px) {
-    .filme-imagem {
-        height: 290px;
-        margin: 10px;
-        margin-bottom: 20px;
-        margin-right: 0;
-        background: rgb(245, 92, 92);
-        padding: 2px 5px;
-        color: #fff;
-        font-size: 8px;
-        font-weight: bold;
-        border-radius: 0 0 0 3px;
-    }
-}
 /* Estilo para filmes em pré-venda */
 .filme-estreia {
     position: relative;
@@ -176,8 +139,23 @@ body{
     top: 10px;
     right: 1px;
 }
-/* Estilo responsivo para larguras de tela menores */
-@media screen and (max-width: 1470px) {
+
+/* Modificações para dispositivos menores */
+@media screen and (max-width: 768px) {
+    .container_nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container_nav nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .container_nav li {
+        margin:0;
+    }
+    
     .filmes {
         display: flex;
         align-items: center;
@@ -195,5 +173,5 @@ body{
         font-size: 8px;
         font-weight: bold;
         border-radius: 0 0 0 3px;
+      }
     }
-}
