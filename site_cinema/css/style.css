@@ -1,37 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
 
-
-
 /* Regras globais */
-
 * {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-
 }
- 
+
 ul {
     list-style: none;
     padding: 0;
 }
 
-main{
+main {
     padding-left: 100px;
     padding-top: 20px;
 }
+
 /* Estilo do body */
-body{
+body {
     background-color: aliceblue;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-
 /*começo da navbar*/
-
 
 /* Navbar */
 
@@ -43,12 +38,14 @@ body{
     flex-direction: column; /* Configura a direção da flexbox para coluna */
     align-items: center; /* Centraliza verticalmente */
 }
+
 /* Estilo do logotipo e do navbar */
 .container_nav h2 {
     color: rgb(245, 92, 92);
-    font-size: 50px;
+    font-size: 2rem;
     margin-bottom: 10px; /* Adiciona uma margem inferior para afastar o título da lista */
 }
+
 /* Estilo da lista do navbar */
 .container_nav nav ul {
     list-style: none;
@@ -87,9 +84,6 @@ body{
     background-color: rgb(156, 8, 8); /* Defina a cor da linha quando o mouse passar por cima */
 }
 
-
-
-
 .container_nav nav ul li a img {
     width: 30px;
     height: 30px;
@@ -97,21 +91,6 @@ body{
     transform: rotate(0deg);
 }
 
-@media screen and (max-width: 820px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container_nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container_nav li {
-        margin: 10px 0;
-    }
-}
 
 /*fim nav bar*/
 
@@ -120,17 +99,19 @@ body{
     flex-direction: row;
     margin-top: 20px;
 }
+
 /*começo do painel de filmes*/
 /* Estilo do painel de filmes */
 .filme-info {
     position: static;
 }
-.filme-info img{
+
+.filme-info img {
     margin-top: 10px;
     flex-wrap: wrap;
 }
 
-main h1{
+main h1 {
     display: flex;
     margin-top: -10px;
     padding-bottom: 10px;
@@ -138,12 +119,15 @@ main h1{
     border-bottom: 1px solid #333333;
     width: 80%;
 }
+
 .filme-info ul {
     padding-top: 5px;
 }
+
 .filme-info li {
     font-size: small;
-} 
+}
+
 .filme-info li a {
     height: 18px;
     text-align: center;
@@ -154,7 +138,13 @@ main h1{
     box-shadow: 1px 1px 0 #fff;
     padding: 0 3px;
 }
-.classificacao {
+
+.classificacao,
+.classificacao-12,
+.classificacao-14,
+.classificacao-16,
+.classificacao-18,
+.classificacao-L {
     height: 18px;
     text-align: center;
     border-radius: 4px;
@@ -164,109 +154,89 @@ main h1{
     box-shadow: 1px 1px 0 #fff;
     padding: 0 3px;
 }
+
 /* Classificação 12 */
 .classificacao-12 {
     background: yellow;
     color: #fff;
     text-shadow: 1px 1px 0px black;
-    height: 18px;
-    text-align: center;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 12px;
-    margin-left: 2px;
-    box-shadow: 1px 1px 0 #fff;
-    padding: 0 3px;
-  }
+}
 
 /* Classificação 14 */
 .classificacao-14 {
     background: orange;
     color: #fff;
     text-shadow: 1px 1px 0px black;
-  }
-  
-  /* Classificação 16 */
+}
+
+/* Classificação 16 */
 .classificacao-16 {
     background: red;
     color: #fff;
     text-shadow: 1px 1px 0px black;
-  }
-  
-  /* Classificação 18 */
+}
+
+/* Classificação 18 */
 .classificacao-18 {
     background: black;
     color: #fff;
     text-shadow: 1px 1px 0px black;
-  }
-  
-  /* Classificação L (Livre) */
+}
+
+/* Classificação L (Livre) */
 .classificacao-L {
     background:  green;
     color: #fff;
     text-shadow: 1px 1px 0px black;
-  }
-  .trailer-button {
+}
+
+.trailer-button {
     padding: 10px 20px;
     background-color: white;
     color: #757575;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
-  }
-  
-  .trailer-button:hover,
-   .trailer-button:active {
+}
+
+.trailer-button:hover,
+.trailer-button:active {
     background-color: rgb(245, 92, 92);
     color: white;
-  }
-
-  @media screen and (max-width: 820px) {
-    main {
-        padding-left: 20px; /* Ajusta o espaçamento lateral */
-        padding-top: 20px;
-    }
-    .principal {
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    .filme-info {
-        display: flex;
-        flex-direction: row; /* Muda para layout de coluna */
-    }
-
-    .filme-info ul {
-        margin-left: 50px;
-    }
-
-    .filme-info img {
-        width: 179px; /* Faz com que a imagem ocupe toda a largura da div pai */
-        margin-top: 0; /* Remove a margem superior */
-    }
 }
+
+
 
 .secoes {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     padding-top: 25px;
 }
+
 .datas {
     margin-left: 180px;
 }
+
 .datas h3 {
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 17px;
-    border-bottom: 1px solid #333333;
-    width: 700px;
+    border-bottom: 1px  solid #333333;
+    width: 300px;
 }
+
 .botoes-dias {
     padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os botões na tela */
 }
+
 .botoes-dias button {
-    width: 65px;
+    min-width: 65px;
     height: 70px;
+    margin-top: 20px;
+    margin-right: 10px;
     background-color: #fff;
     border-color: rgb(245, 92, 92);
     text-align: center;
@@ -275,24 +245,34 @@ main h1{
     line-height: 20px;
     cursor: pointer;
 }
+
+/* Ajuste para centralizar o último botão quando não houver espaço suficiente */
+.botoes-dias button:last-child {
+    margin-right: auto;
+}
+
 .botoes-dias button li:nth-child(1) {
     color: #2f2f2f;
     font-weight: 500;
     font-size: 13px;
 }
+
 .botoes-dias button li:nth-child(2) {
     color: #757575;
     font-weight: bold;
     font-size: 30px;
 }
+
 .botoes-dias button li:nth-child(3) {
     color: #757575;
     font-weight: normal;
     font-size: 10px;
 }
+
 .botoes-dias button:hover {
     background-color: #E0E0E0;
 }
+
 .botoes-dias button.ativo {
     background-color: rgb(245, 92, 92);
     border-color: rgb(245, 92, 92);
@@ -300,32 +280,45 @@ main h1{
     text-align: center;
     border-radius: 3px;
 }
+
 .botoes-dias button.ativo li:nth-child(1) {
     color: #fff;
 }
+
 .botoes-dias button.ativo li:nth-child(2) {
     color: #fff;
 }
+
 .botoes-dias button.ativo li:nth-child(3) {
     color: #fff;
 }
+
+
+
+/* Modificações para a seção de ingressos responsiva */
+/* Modificações para a seção de ingressos responsiva */
 .ingressos {
     padding: 15px;
     margin-top: 20px;
     border-radius: 3px;
     background-color: white;
     color: #333333;
-    width: 40%;
-    display: none;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
+
 .ingressos h4 {
     color: rgb(245, 92, 92);
     font-weight: bold;
     font-style: italic;
     font-size: 14px;
+    margin-bottom: 10px;
 }
+
 .ingressos h5 {
-    width: 30%;
+    width: 100%;
     padding: 5px 7px;
     font-size: 12px;
     font-weight: bold;
@@ -337,44 +330,196 @@ main h1{
     border-radius: 10px;
     border: 1px solid;
     border-color: #FF531E;
-    margin-right: 5px;
-    margin-top: 8px;
+    margin-bottom: 10px;
 }
+
 .horarios {
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
 }
+
 .horarios button {
     cursor: pointer;
-    width: 72px;
+    width: 100%;
     height: 32px;
+    margin-top: 10px;
     border-radius: 4px;
     border: 1px solid transparent;
     background-color: rgb(241, 92, 92);
-    padding: 6px 12px;
+    padding: 10px 12px;
     color: #fff;
     font-weight: bold;
     font-size: 13px;
-    margin-right: 10px;
 }
+
 .horarios button:hover {
     background-color: rgb(250, 55, 55);
 }
+
 .horarios button.ativo {
     background-color: rgb(250, 55, 55);
 }
-@media screen and (max-width: 820px) {
+
+/* Media Query para dispositivos menores */
+@media screen and (max-width: 600px) {
+    main {
+        padding-left: 20px; /* Ajusta o espaçamento lateral */
+        padding-top: 20px;
+    }
+
+    .principal {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: flex-start; 
+    }
+
+    .filme-info {
+        display: flex;
+        flex-direction: row; 
+    }
+
+    .filme-info ul {
+        margin-left: 50px; 
+    }
+
+    .filme-info img {
+        width: 179px; /* Faz com que a imagem ocupe toda a largura da div pai */
+        margin-top: 0; /* Remove a margem superior */
+    }
+
     .secoes {
         display: flex;
-        flex-direction: row;
+        flex-direction: column-reverse; /* Muda para layout de coluna invertida em dispositivos menores */
         padding-top: 25px;
     }
 
     .datas {
         margin-left: 0;
-        padding-left: 0;
     }
-    .filme-info li {
-        font-size: medium;
-    } 
-    
+
+    .datas h3 {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        font-size: 17px;
+        border-bottom: 1px solid #333333;
+        border-bottom-width: 50%;
+    }
+
+    /* Modificações para os botões de dias responsivos */
+    .botoes-dias {
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; /* Alinha os botões no início da tela em dispositivos menores */
+    }
+
+    .botoes-dias button {
+        min-width: 65px;
+        height: 70px;
+        margin-top: 20px;
+        margin-right: 10px;
+        background-color: #fff;
+        border-color: rgb(245, 92, 92);
+        text-align: center;
+        border: 1px solid #2f2f2f;
+        border-radius: 3px;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    /* Ajuste para centralizar o último botão quando não houver espaço suficiente */
+    .botoes-dias button:last-child {
+        margin-right: auto;
+    }
+
+    .botoes-dias button li:nth-child(1),
+    .botoes-dias button li:nth-child(2),
+    .botoes-dias button li:nth-child(3) {
+        color: #757575;
+    }
+
+    .botoes-dias button:hover {
+        background-color: #E0E0E0;
+    }
+
+    .botoes-dias button.ativo {
+        background-color: rgb(245, 92, 92);
+        border-color: rgb(245, 92, 92);
+        color: #fff;
+        text-align: center;
+        border-radius: 3px;
+    }
+
+    /* Modificações para a seção de ingressos responsiva */
+    .ingressos {
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 3px;
+        background-color: white;
+        color: #333333;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ingressos h4 {
+        color: rgb(245, 92, 92);
+        font-weight: bold;
+        font-style: italic;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+.ingressos h5 {
+    width: 100%;
+    padding: 5px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    color: #FF531E;
+    line-height: 1;
+    text-align: center; /* Adiciona centralização ao texto */
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #FF531E;
+    box-sizing: border-box; /* Garante que a largura e altura incluam o preenchimento e a borda */
+    margin-bottom: 10px;
 }
+
+
+
+
+    .horarios {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .horarios button {
+        cursor: pointer;
+        width: 100%;
+        height: 32px;
+        margin-top: 10px;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        background-color: rgb(241, 92, 92);
+        padding: 10px 12px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    .horarios button:hover {
+        background-color: rgb(250, 55, 55);
+    }
+
+    .horarios button.ativo {
+        background-color: rgb(250, 55, 55);
+    }
+    }
+    
