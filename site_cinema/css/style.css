@@ -221,21 +221,16 @@ main h1 {
     padding-top: 20px;
     padding-bottom: 10px;
     font-size: 17px;
-    border-bottom: 1px  solid #333333;
-    width: 300px;
+    border-bottom: 1px solid #333333;
 }
 
 .botoes-dias {
     padding-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centraliza os botões na tela */
 }
 
 .botoes-dias button {
     min-width: 65px;
     height: 70px;
-    margin-top: 20px;
     margin-right: 10px;
     background-color: #fff;
     border-color: rgb(245, 92, 92);
@@ -303,9 +298,8 @@ main h1 {
     border-radius: 3px;
     background-color: white;
     color: #333333;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 40%;
+    display: none;
     
 }
 
@@ -318,7 +312,7 @@ main h1 {
 }
 
 .ingressos h5 {
-    width: 100%;
+    width: 40%;
     padding: 5px 7px;
     font-size: 12px;
     font-weight: bold;
@@ -330,28 +324,28 @@ main h1 {
     border-radius: 10px;
     border: 1px solid;
     border-color: #FF531E;
-    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-top: 8px;
 }
 
 .horarios {
     margin-top: 10px;
     display: flex;
-    flex-direction: column;
-    margin-left: 0;
 }
 
 .horarios button {
     cursor: pointer;
-    width: 100%;
+    width: 72px;
     height: 32px;
     margin-top: 10px;
     border-radius: 4px;
     border: 1px solid transparent;
     background-color: rgb(241, 92, 92);
-    padding: 10px 12px;
+    padding: 6px 12px;
     color: #fff;
     font-weight: bold;
     font-size: 13px;
+    margin-right: 10px;
 }
 
 .horarios button:hover {
@@ -363,7 +357,7 @@ main h1 {
 }
 
 /* Media Query para dispositivos menores */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     main {
         padding-left: 20px; /* Ajusta o espaçamento lateral */
         padding-top: 20px;
@@ -392,7 +386,7 @@ main h1 {
 
     .secoes {
         display: flex;
-        flex-direction: column-reverse; /* Muda para layout de coluna invertida em dispositivos menores */
+        flex-direction: row;
         padding-top: 25px;
     }
 
@@ -465,55 +459,6 @@ main h1 {
         margin-right: auto;
     }
 
-    .ingressos h4 {
-        color: rgb(245, 92, 92);
-        font-weight: bold;
-        font-style: italic;
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-.ingressos h5 {
-    width: 100%;
-    padding: 5px 7px;
-    font-size: 12px;
-    font-weight: bold;
-    font-style: normal;
-    color: #FF531E;
-    line-height: 1;
-    text-align: center; /* Adiciona centralização ao texto */
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #FF531E;
-    box-sizing: border-box; /* Garante que a largura e altura incluam o preenchimento e a borda */
-    margin-bottom: 10px;
-}
-
-
-
-
-    .horarios {
-        margin-top: 10px;
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .horarios button {
-        cursor: pointer;
-        width: 100%;
-        height: 32px;
-        margin-top: 10px;
-        border-radius: 4px;
-        border: 1px solid transparent;
-        background-color: rgb(241, 92, 92);
-        padding: 10px 12px;
-        color: #fff;
-        font-weight: bold;
-        font-size: 11px;
-    }
-
     .horarios button:hover {
         background-color: rgb(250, 55, 55);
     }
@@ -522,4 +467,3 @@ main h1 {
         background-color: rgb(250, 55, 55);
     }
     }
-    
