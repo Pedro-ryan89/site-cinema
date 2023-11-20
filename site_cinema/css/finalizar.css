@@ -160,7 +160,7 @@ table {
     border-collapse: collapse;
 }
 th, td {
-    padding: 10px;
+    padding: 5px;
     text-align: left;
     border-bottom: 1px solid #ccc;
 }
@@ -374,9 +374,4 @@ table h4 {
     max-width: 80%; /* Defina uma largura máxima conforme necessário */
     max-height: 80%; /* Defina uma altura máxima conforme necessário */
 }
-
-
-
- 
-        }
-    
+}
