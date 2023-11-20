@@ -19,7 +19,7 @@ ul {
 }
 /* Estilo do body */
 body{
-    background-color: aliceblue;
+    background-color: rgb(245, 92, 92);
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -111,22 +111,18 @@ body{
 /*fim nav bar*/
 
 .conclusao-compra {
-    text-align: center;
-    padding-top: 195px;
-    padding-bottom: 260px;
-    padding-left: 300px;
-    padding-right: 300px;
-    background-color: rgb(245, 92, 92);
     color: #fff;
+    text-align: center;
+    padding: 10% 5%; /* Espaçamento interno responsivo */
 }
 
 .conclusao-compra h1 {
-    font-size: 36px;
+    font-size: 90px;
     margin-bottom: 20px;
 }
 
 .conclusao-compra p {
-    font-size: 18px;
+    font-size: 40px;
     line-height: 1.5;
     font-style: italic;
 }
