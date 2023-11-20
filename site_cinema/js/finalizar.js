@@ -94,13 +94,16 @@ $(document).ready(function () {
     }
 
     $('#finalizar').on('click', function (event) {
-        const poltronasSelecionadas = $('.poltrona-selecionada').length > 0;
+        const quantidadeInteiraValue = parseInt(quantidadeInteira.val());
+        const quantidadeMeiaValue = parseInt(quantidadeMeia.val());
+        const totalIngressos = quantidadeInteiraValue + quantidadeMeiaValue;
 
-        if (!poltronasSelecionadas) {
+        const poltronasSelecionadas = $('.poltrona-selecionada').length;
+
+        if (poltronasSelecionadas != totalIngressos) {
             event.preventDefault();
-            alert('Por favor, selecione pelo menos uma poltrona.');
+            alert('Por favor, selecione todas as poltronas disponiveis.');
         } else {
-            // window.location.href = "ingresso_comprado.html";
         }
     });
 
