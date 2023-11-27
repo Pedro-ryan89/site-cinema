@@ -108,7 +108,7 @@ body{
     border-radius: 3px;
     background-color: white;
     color: #333333;
-    width: 60%;
+    margin-right: 110px;
     height: auto;
 }
 .painel {
@@ -374,4 +374,21 @@ table h4 {
     max-width: 80%; /* Defina uma largura máxima conforme necessário */
     max-height: 80%; /* Defina uma altura máxima conforme necessário */
 }
+}
+.rodape {
+    border-top: 1px solid black;
+    margin-top: 400px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-top: 30px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rodape h2 {
+    color: rgb(245, 92, 92);
+    font-size: 3rem;
+    margin-bottom: 10px; /* Adiciona uma margem inferior para afastar o título da lista */
 }
