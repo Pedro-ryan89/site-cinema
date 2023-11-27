@@ -124,7 +124,7 @@ main h1 {
     padding: 0;
 }
 .carrossel img {
-    max-width: 100%;
+    width: 100%;
 }
 .filme-imagem {
     background: rgb(245, 92, 92);
