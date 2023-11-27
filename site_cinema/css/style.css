@@ -96,18 +96,22 @@ body{
     transform: rotate(0deg);
 }
 
+main h1 {
+    display: flex;
+    justify-content: center;
+
+}
 
 .filmes{
     display: flex;
     padding-top: 50px;
-    padding-left: 70px;
-    width: 1362px; 
-    justify-content: inherit;
+    margin: 200px;
+    justify-content: center;
     align-items: center; /* Adiciona alinhamento vertical ao centro */
     flex-wrap: wrap; /* Para lidar com a quebra de linha das imagens */
     border-top: 1px solid black;
-    margin-right: 50px;
     margin-top: 23px;
+    margin-bottom: 80px;
 }
 
 .filmes img{
@@ -149,7 +153,7 @@ body{
 }
 
 /* Modificações para dispositivos menores */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1455px) {
     .container_nav {
         flex-direction: column;
         align-items: center;
@@ -166,8 +170,7 @@ body{
     
     .filmes {
         display: flex;
-        align-items: center;
-        width: 80%;
+        justify-content: center;
     }
     .filme-imagem {
         height: 298px;
@@ -254,4 +257,28 @@ body{
     }
     .segunda {
         margin-top: 150px;
+    }
+    @media screen and (max-width: 420px) {
+        .filmes {
+            border-top: 1px solid black;
+            margin: 0;
+            margin: 50px;
+            margin-top: 20px;
+        }
+    }
+    .rodape {
+        border-top: 1px solid black;
+        margin-right: 200px;
+        margin-left: 200px;
+        padding-top: 30px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rodape h2 {
+        color: rgb(245, 92, 92);
+        font-size: 3rem;
+        margin-bottom: 10px; /* Adiciona uma margem inferior para afastar o título da lista */
     }
