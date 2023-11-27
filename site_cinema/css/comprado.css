@@ -126,3 +126,11 @@ body{
     line-height: 1.5;
     font-style: italic;
 }
+@media screen and (max-width: 540px) {
+    .conclusao-compra h1 {
+        font-size: 70px;
+    }
+    .conclusao-compra p {
+        font-size: 30px;
+    }
+}
