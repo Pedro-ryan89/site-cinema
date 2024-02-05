@@ -1,81 +1,717 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Cinefilmes</title>
-</head>
-<body>
-    <!-- Cabeçalho com logotipo e barra de navegação -->
-    <header>
-        <nav class="container_nav">
-            <!-- Logotipo -->
-            <a href="/hmtl/index.html"><h2>Cinefilmes</h2></a>
-            <!-- Barra de navegação -->
-            <nav>
-                <ul>
-                    <!-- Links de navegação -->
-                    <li><a href="#">Filmes em cartaz</a></
-                </ul>
-            </nav>
-        </nav>
-    </header>
-    <!-- Seção de carrossel com uma imagem -->
-    <section class="carrossel">
-        <img src="/img/carrossel.jpg" alt="">
-    </section>
-    <!-- Seção principal -->
-    <main>
-        <section class="notificacao">
-            <section class="titulo">
-                <p>PRÉ-VENDA</p>
-            </section>
-            <p>ASSISTA A MARVELS</p>
-            <a href="filme.html?filme=6"><img src="/img/filmes_templates/as-marvels_42247_home.jpg" alt=""></a>
-            <section class="hover">
-            </section>
-        </section>
-        <section class="notificacao segunda">
-            <section class="titulo">
-                <p>NACIONAL</p>
-            </section>
-            <p>ASSISTA A MUSSUM</p>
-            <a href="filme.html?filme=5"><img src="/img/filmes_templates/mussum-o-filmis_46539_home.jpg" alt=""></a>
-            <section class="hover">
-            </section>
-        </section>
-        
-        <!-- Título "Em cartaz" -->
-        <h1>Em cartaz</h1>
-        <!-- Seção de filmes -->
-        <section class="filmes">
-            <!-- Imagens de filmes com links para páginas específicas -->
-            <a href="filme.html?filme=0"><img src="/img/filmes_templates/five-nights-at-freddys-o-pesadelo-sem-fim_46543_home.jpg" alt=""></a>
-            <a href="filme.html?filme=1"><img src="/img/filmes_templates/o-exorcista-o-devoto_46537_home.jpg" alt=""></a>
-            <a href="filme.html?filme=2"><img src="/img/filmes_templates/oppenheimer_39761_home.jpg" alt=""></a>
-            <a href="filme.html?filme=3"><img src="/img/filmes_templates/patrulha-canina-um-filme-superpoderoso_43279_home.jpg" alt=""></a>
-            <a href="filme.html?filme=4"><img src="/img/filmes_templates/trolls-3-juntos-novamente_40025_home.jpg" alt=""></a>
-            <a href="filme.html?filme=5"><img src="/img/filmes_templates/mussum-o-filmis_46539_home.jpg" alt=""></a>
-            <!-- Filmes em pré-venda com borda especial -->
-            <article class="filme-estreia">
-                <a href="filme.html?filme=6"><img class="filme-imagem" src="/img/filmes_templates/as-marvels_42247_home.jpg" alt=""></a>
-                <div class="filme-botao">PRÉ VENDA</div>
-            </article>
-            <article class="filme-estreia">
-                <a href="filme.html?filme=7"><img class="filme-imagem" src="/img/filmes_templates/jogos-vorazes-a-cantiga-dos-passaros-e-das-serpentes_28791_home.jpg" alt=""></a>
-                <div class="filme-botao">PRÉ VENDA</div>
-            </article>
-        </section>
-    </main>
-    <footer>
-        <section class="rodape">
-            <a href="/hmtl/index.html"><h2>Cinefilmes</h2></a>
-            <p>
-                ©2023 por Victor Manuel e Pedro Ryan. 
-                <p>Todos os direitos reservados</p>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Site Pascom - Cristo Redentor" />
+    <meta name="author" content="Victor Manuel e Rafael Bezerra" />
+    <meta property="og:description" content="Site Pascom - Cristo Redentor" />
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="developer, programação, dev, desenvolvedor, programador, html, css, javascript, nodejs, reactjs, react, github, frontend, front-end" />
+    <meta name="robots" content="index" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Gemunu+Libre:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="/img/pascom - icon.png"
+      type="image/x-icon"
+      width="16"
+      height="16"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
+    integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="module" src="js/main.js" defer></script>
+    
+    <title>Pascom PJCR</title>
+  </head>
+  <body>
+    <nav id="navigation">
+      <div class="wrapper">
+        <a class="logo" href="#"><img src="https://th.bing.com/th/id/R.14bea72f5b6f8fd3b20dd35fc118f5ea?rik=kn%2b5mG5fcCMgQQ&riu=http%3a%2f%2fwww.arquidiocesedesantarem.org.br%2fimagens%2fupload%2flogo-pascom-primaria_29-01-2021-09-38-51.png&ehk=6wOX2%2bnvUIFgw31zwclH5nHa1KNNNHIVoQ%2fp6IpLiyc%3d&risl=&pid=ImgRaw&r=0"/><p><h5></h5></p></a>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a id="homeNav" class="close" href="#home">Home</a>
+            </li>
+            <li>
+              <a id="aboutNav" class="close" href="#about">Sobre</a>
+            </li>
+            <li>
+              <a id="projectsNav" class="close" href="#projects">Pastorais</a>
+            </li>
+            <li>
+              <a id="ultimosNav" class="close" href="#knowledge">Últimas</a>
+            </li>
+            <li>
+              <a id="contactNav" class="close" href="#contact">Contatos</a>
+            </li>
+          </ul>
+
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://www.instagram.com/paroquiajesuscristo/"
+                title="Instagram"
+                target="_blank"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+                <a
+                  href="https://www.youtube.com/@PadreFranciscoDanisio"
+                  title="Youtube"
+                  target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+                      fill="rgba(255,255,255,1)"
+                    />
+                  </svg>
+                </a>
+              </li>
+            <li>
+              <a
+                href="https://www.facebook.com/paroquia.itapipoca"
+                title="Facebook"
+                target="_blank"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                    fill="rgba(255,255,255,1)"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+                <a
+                  href="https://www.radios.com.br/aovivo/radio-cristo-redentor/198647"
+                  title="Web Radio"
+                  target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M224 0C100.3 0 0 100.3 0 224c0 92.22 55.77 171.4 135.4 205.7c-3.48-20.75-6.17-41.59-6.998-58.15C80.08 340.1 48 285.8 48 224c0-97.05 78.95-176 176-176s176 78.95 176 176c0 61.79-32.08 116.1-80.39 147.6c-.834 16.5-3.541 37.37-7.035 58.17C392.2 395.4 448 316.2 448 224C448 100.3 347.7 0 224 0zM224 312c-32.88 0-64 8.625-64 43.75c0 33.13 12.88 104.3 20.62 132.8C185.8 507.6 205.1 512 224 512s38.25-4.375 43.38-23.38C275.1 459.9 288 388.8 288 355.8C288 320.6 256.9 312 224 312zM224 280c30.95 0 56-25.05 56-56S254.1 168 224 168S168 193 168 224S193 280 224 280zM368 224c0-79.53-64.47-144-144-144S80 144.5 80 224c0 44.83 20.92 84.38 53.04 110.8c4.857-12.65 14.13-25.88 32.05-35.04C165.1 299.7 165.4 299.7 165.6 299.7C142.9 282.1 128 254.9 128 224c0-53.02 42.98-96 96-96s96 42.98 96 96c0 30.92-14.87 58.13-37.57 75.68c.1309 .0254 .5078 .0488 .4746 .0742c17.93 9.16 27.19 22.38 32.05 35.04C347.1 308.4 368 268.8 368 224z"
+                      fill="rgba(255,255,255,1)"
+                    />
+                  </svg>
+                </a>
+              </li>
+          </ul>
+        </div>
+
+        <button
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          class="open-menu open"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          class="close-menu close"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <section id="home">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h1>Bem vindo a Pascom Cristo Redentor</h1>
+          </header>
+          <div class="content">
+            <p class="line typing">Sua fonte de informações sobre comunicação paroquial.
             </p>
-        </section>
+            <a class="button" href="#contact"> Junte-se a nós </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="https://1.bp.blogspot.com/-sUd84HealhU/YHiAvX4KDLI/AAAAAAAABwo/oI0YSXAjsGsw19jopqWXlbk3Unvbm1_qACLcBGAsYHQ/w1200-h630-p-k-no-nu/pascom.png"
+            alt="logo principal Pascom."
+            id="pascom-logoprincipal"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h2>Sobre nós</h2>
+          </header>
+          <div class="content">
+            <p>
+                A Pascom é a Pastoral da Comunicação (PASCOM) é um setor da Igreja Católica dedicado a facilitar a comunicação entre a paróquia ou comunidade e seus membros, bem como com a sociedade em geral. Seu principal objetivo é promover a evangelização e a difusão dos valores religiosos por meio dos diferentes meios de comunicação disponíveis. Isso pode incluir a gestão do site da paróquia, perfis de mídia social, boletins informativos, rádio comunitária e até mesmo produção de vídeos.
+                A PASCOM desempenha um papel crucial na divulgação das atividades eclesiásticas, como missas, sacramentos, eventos sociais e caritativos. Além disso, ela ajuda a transmitir mensagens de fé, reflexões espirituais e orientações pastorais aos fiéis, contribuindo para a formação religiosa e o fortalecimento da comunidade.
+                Para cumprir esses propósitos, a PASCOM normalmente conta com membros engajados, como comunicadores, jornalistas, designers gráficos, fotógrafos e outros profissionais da área de comunicação. Essas pessoas trabalham em conjunto para garantir que a mensagem da paróquia seja clara, relevante e acessível a todos os membros da comunidade, bem como para estabelecer uma presença significativa nos meios de comunicação modernos.
+                Em resumo, a PASCOM é uma pastoral que reconhece a importância da comunicação na sociedade contemporânea e busca utilizar essas ferramentas para conectar-se com os fiéis e promover os valores religiosos e morais da Igreja Católica.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="img/pascom.png"
+            alt="Imagem da Pascom"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrapper"></div>
+    </section>
+
+    <section id="knowledge">
+      <div class="wrapper">
+        <header>
+          <h2>Últimas</h2>
+        </header>
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+                    fill="rgba(255,255,255,1)"
+                  />
+                </svg>
+              <h3>Programação da semana</h3>
+              <h4>
+                <ul>
+                  <li>Terça: Santa missa - 19h00 (16/01)</li>
+                  <li>Quarta: Santa missa - 19h00 (17/01)</li>
+                  <li>Quinta: Santa missa - 19h00 (18/01)</li>
+                  <li>Sexta: Santa missa - 19h00 (19/01)</li>
+                  <li>Sábado: Santa missa - 19h00 (20/01)</li>
+                  <li>Domingo: Santa missa - 07h00 / 16h00 / 19h00 (21/01)</li>
+                </ul>
+            </div>
+            <div class="card">
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zm9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5zm-2.24 4.855a.428.428 0 1 0 0-.855.426.426 0 0 0-.429.43c0 .238.192.425.43.425zm.337.563h-.672v4.105h.672V8.418zm-6.867 4.105v-2.3h2.261v-.61H4.684V7.801h2.464v-.61H4v5.332h.684zm3.296 0h.676V9.98c0-.554.227-1.007.953-1.007.125 0 .258.004.329.015v-.613a1.806 1.806 0 0 0-.254-.02c-.582 0-.891.32-1.012.567h-.02v-.504H7.98v4.105z"
+                    fill="rgba(255,255,255,1)"
+                  />
+                </svg>
+              <h3>02° Semana do tempo comum</h3>
+              <h4></h4>
+              <h4></h4>
+              <h4></h4>
+            </div>
+            <div class="card" id="liturgia-14">
+              <h3>Liturgia diária - 14/10/2024 | Domingo</h3>
+              <h3>02° Semana do tempo comum</h3>
+              <h4>
+                  <ul>
+                      <li>Primeira Leitura: Isaías 25,6-10</li>
+                      <li>Salmo Responsorial: 22(23)</li>
+                      <li>Segunda Leitura: Filipenses 4,12-14.19-20</li>
+                      <li>Evangelho: Mateus 22,1-14 ou 1-10</li>
+                  </ul>
+              </h4>
+              <p>Proclamação do Evangelho de Jesus Cristo segundo Mateus – [Naquele tempo, 1Jesus voltou a falar em parábolas aos sumos sacerdotes e aos anciãos do povo, dizendo: 2“O Reino dos Céus é como a história do rei que preparou a festa de casamento do seu filho. 3E mandou os seus empregados para chamar os convidados para a festa, mas estes não quiseram ir. 4O rei mandou outros empregados, dizendo: ‘Dizei aos convidados: já preparei o banquete, os bois e os animais cevados já foram abatidos, e tudo está pronto. Vinde para a festa!’ 5Mas os convidados não deram a menor atenção: um foi para o seu campo, outro para os seus negócios, 6outros agarraram os empregados, bateram neles e os mataram. 7O rei ficou indignado e mandou suas tropas para matar aqueles assassinos e incendiar a cidade deles. 8Em seguida, o rei disse aos empregados: ‘A festa de casamento está pronta, mas os convidados não foram dignos dela. 9Portanto, ide até as encruzilhadas dos caminhos e convidai para a festa todos os que encontrardes’. 10Então os empregados saíram pelos caminhos e reuniram todos os que encontraram, maus e bons. E a sala da festa ficou cheia de convidados.] 11Quando o rei entrou para ver os convidados, observou aí um homem que não estava usando traje de festa 12e perguntou-lhe: ‘Amigo, como entraste aqui sem o traje de festa?’ Mas o homem nada respondeu. 13Então o rei disse aos que serviam: ‘Amarrai os pés e as mãos desse homem e jogai-o fora, na escuridão! Aí haverá choro e ranger de dentes’. 14Porque muitos são chamados, e poucos são escolhidos”. – Palavra da salvação.</p>
+            </div>
+      
+          <div class="card" id="liturgia-15">
+              <h3>Liturgia diária - 15/01/2024 | Segunda</h3>
+              <h3>02° Semana do tempo comum</h3>
+              <h4>
+                  <ul>
+                      <li>Primeira Leitura: Romanos 1,1-7</li>
+                      <li>Salmo Responsorial: 97(98)</li>
+                      <li>Evangelho: Lucas 11,29-32</li>
+                  </ul>
+              </h4>
+              <p>Proclamação do Evangelho de Jesus Cristo segundo Lucas – Naquele tempo, 29quando as multidões se reuniram em grande quantidade, Jesus começou a dizer: “Esta geração é uma geração má. Ela busca um sinal, mas nenhum sinal lhe será dado, a não ser o sinal de Jonas. 30Com efeito, assim como Jonas foi um sinal para os ninivitas, assim também será o Filho do Homem para esta geração. 31No dia do julgamento, a rainha do Sul se levantará juntamente com os homens desta geração e os condenará. Porque ela veio de uma terra distante para ouvir a sabedoria de Salomão. E aqui está quem é maior do que Salomão. 32No dia do julgamento, os ninivitas se levantarão juntamente com esta geração e a condenarão. Porque eles se converteram quando ouviram a pregação de Jonas. E aqui está quem é maior do que Jonas”. – Palavra da salvação.</p>
+          </div>
+      
+          <div class="card" id="liturgia-16">
+              <h2>Apresentação de Nossa Senhora - Memória</h2>
+              <h3>Liturgia diária - 16/01/2024 | Terça</h3>
+              <h3>02° Semana do tempo comum</h3>
+              <h4>
+                  <ul>
+                      <li>Primeira Leitura: Zacarias 2,14-17</li>
+                      <li>Salmo Responsorial: Lc 1</li>
+                      <li>Evangelho: Mateus 12,46-50</li>
+                  </ul>
+              </h4>
+              <p>Proclamação do Evangelho de Jesus Cristo segundo Mateus – Naquele tempo, 46enquanto Jesus estava falando às multidões, sua mãe e seus irmãos ficaram do lado de fora, procurando falar com ele. 47Alguém disse a Jesus: “Olha! Tua mãe e teus irmãos estão aí fora e querem falar contigo”. 48Jesus perguntou àquele que tinha falado: “Quem é minha mãe e quem são meus irmãos?” 49E, estendendo a mão para os discípulos, Jesus disse: “Eis minha mãe e meus irmãos. 50Pois todo aquele que faz a vontade do meu Pai, que está nos céus, esse é meu irmão, minha irmã e minha mãe”. – Palavra da salvação.</p>
+          </div>
+
+          <div class="card" id="liturgia-17">
+            <h3>Liturgia diária - 17/01/2024 | Quarta</h3>
+            <h3>02° Semana do tempo comum</h3>
+            <h4>
+                <ul>
+                    <li>Primeira Leitura: 2 Macabeus 7,1.20-31</li>
+                    <li>Salmo Responsorial: 16(17)</li>
+                    <li>Evangelho: Lucas 19,11-28</li>
+                </ul>
+            </h4>
+            <p>Proclamação do Evangelho de Jesus Cristo segundo Lucas – Naquele tempo, 11Jesus acrescentou uma parábola, porque estava perto de Jerusalém e eles pensavam que o Reino de Deus ia chegar logo. 12Então Jesus disse: “Um homem nobre partiu para um país distante a fim de ser coroado rei e depois voltar. 13Chamou então dez dos seus empregados, entregou cem moedas de prata a cada um e disse: ‘Procurai negociar até que eu volte’. 14Seus concidadãos, porém, o odiavam e enviaram uma embaixada atrás dele, dizendo: ‘Nós não queremos que esse homem reine sobre nós’. 15Mas o homem foi coroado rei e voltou. Mandou chamar os empregados, aos quais havia dado o dinheiro, a fim de saber quanto cada um havia lucrado. 16O primeiro chegou e disse: ‘Senhor, as cem moedas renderam dez vezes mais’. 17O homem disse: ‘Muito bem, servo bom. Como foste fiel em coisas pequenas, recebe o governo de dez cidades’. 18O segundo chegou e disse: ‘Senhor, as cem moedas renderam cinco vezes mais’. 19O homem disse também a este: ‘Recebe tu também o governo de cinco cidades’. 20Chegou o outro empregado e disse: ‘Senhor, aqui estão as tuas cem moedas, que guardei num lenço, 21pois eu tinha medo de ti, porque és um homem severo. Recebes o que não deste e colhes o que não semeaste’. 22O homem disse: ‘Servo mau, eu te julgo pela tua própria boca. Tu sabias que eu sou um homem severo, que recebo o que não dei e colho o que não semeei. 23Então, por que tu não depositaste meu dinheiro no banco? Ao chegar, eu o retiraria com juros’. 24Depois disse aos que estavam aí presentes: ‘Tirai dele as cem moedas e dai-as àquele que tem mil’. 25Os presentes disseram: ‘Senhor, esse já tem mil moedas!’ 26Ele respondeu: ‘Eu vos digo, a todo aquele que já possui será dado mais ainda; mas àquele que nada tem será tirado até mesmo o que tem. 27E quanto a esses inimigos, que não queriam que eu reinasse sobre eles, trazei-os aqui e matai-os na minha frente'”. 28Jesus caminhava à frente dos discípulos, subindo para Jerusalém. – Palavra da salvação.</p>
+        </div>
+
+        <div class="card" id="liturgia-18">
+          <h3>Liturgia diária - 18/01/2024 | Quinta</h3>
+          <h3>02° Semana do tempo comum</h3>
+          <h4>
+              <ul>
+                  <li>Primeira Leitura: 1 Samuel 18,6-9; 19,1-7</li>
+                  <li>Salmo Responsorial: 55(56)</li>
+                  <li>Evangelho: Marcos 3,7-12</li>
+              </ul>
+          </h4>
+          <p>Proclamação do santo Evangelho segundo Marcos – Naquele tempo, 7Jesus se retirou para a beira do mar junto com seus discípulos. Muita gente da Galileia o seguia. 8E também muita gente da Judeia, de Jerusalém, da Idumeia, do outro lado do Jordão, dos territórios de Tiro e Sidônia foi até Jesus, porque tinham ouvido falar de tudo o que ele fazia. 9Então Jesus pediu aos discípulos que lhe providenciassem uma barca, por causa da multidão, para que não o comprimisse. 10Com efeito, Jesus tinha curado muitas pessoas, e todos os que sofriam de algum mal jogavam-se sobre ele para tocá-lo. 11Vendo Jesus, os espíritos maus caíam a seus pés, gritando: “Tu és o Filho de Deus!” 12Mas Jesus ordenava severamente para não dizerem quem ele era. – Palavra da salvação.</p>
+        </div>
+
+        <div class="card" id="liturgia-19">
+          <h3>Liturgia diária - 19/01/2024 | Sexta</h3>
+          <h3>02° Semana do tempo comum</h3>
+          <h4>
+            <ul>
+                <li>Primeira Leitura: 1 Samuel 24,3-21</li>
+                <li>Salmo Responsorial: 56(57)</li>
+                <li>Evangelho: Marcos 3,13-19</li>
+            </ul>
+          </h4>
+          <p>Proclamação do santo Evangelho segundo Marcos – Naquele tempo, 13Jesus subiu ao monte e chamou os que ele quis. E foram até ele. 14Então Jesus designou Doze, para que ficassem com ele e para enviá-los a pregar, 15com autoridade para expulsar os demônios. 16Designou, pois, os Doze: Simão, a quem deu o nome de Pedro; 17Tiago e João, filhos de Zebedeu, aos quais deu o nome de Boanerges, que quer dizer “filhos do trovão”; 18André, Filipe, Bartolomeu, Mateus, Tomé, Tiago, filho de Alfeu, Tadeu, Simão, o cananeu, 19e Judas Iscariotes, aquele que depois o traiu. – Palavra da salvação.</p>
+        </div>
+        
+        <div class="card" id="liturgia-20">
+          <h3>Liturgia diária - 20/01/2024 | Sábado</h3>
+          <h3>02° Semana do tempo comum</h3>
+          <h4>
+              <ul>
+                  <li>Primeira Leitura: 2 Samuel 1,1-4.11-12.19.23-27</li>
+                  <li>Salmo Responsorial: 79(80)</li>
+                  <li>Evangelho: Marcos 3,20-21</li>
+              </ul>
+          </h4>
+          <p>Proclamação do santo Evangelho segundo Marcos – Naquele tempo, 20Jesus voltou para casa com os discípulos. E de novo se reuniu tanta gente, que eles nem sequer podiam comer. 21Quando souberam disso, os parentes de Jesus saíram para agarrá-lo, porque diziam que estava fora de si. – Palavra da salvação.</p>
+        </div>
+        <div class="card" id="liturgia-21">
+              <h3>Liturgia diária - 21/01/2024 | Domingo</h3>
+              <h3>03° Semana do tempo comum</h3>
+              <h4>
+                  <ul>
+                      <li>Primeira Leitura: Jonas 3,1-5.10</li>
+                      <li>Salmo Responsorial: 24(25)</li>
+                      <li>Segunda Leitura: 1 Coríntios 7,29-31</li>
+                      <li>Evangelho: Marcos 1,14-20</li>
+                  </ul>
+              </h4>
+              <p>Proclamação do santo Evangelho segundo Marcos – 14Depois que João Batista foi preso, Jesus foi para a Galileia, pregando o Evangelho de Deus e dizendo: 15“O tempo já se completou e o Reino de Deus está próximo. Convertei-vos e crede no Evangelho!” 16E, passando à beira do mar da Galileia, Jesus viu Simão e André, seu irmão, que lançavam a rede ao mar, pois eram pescadores. 17Jesus lhes disse: “Segui-me e eu farei de vós pescadores de homens”. 18E eles, deixando imediatamente as redes, seguiram a Jesus. 19Caminhando mais um pouco, viu também Tiago e João, filhos de Zebedeu. Estavam na barca, consertando as redes; 20e logo os chamou. Eles deixaram seu pai, Zebedeu, na barca com os empregados e partiram, seguindo Jesus. – Palavra da salvação.</p>
+            </div>
+        </div>
+        <div id="slider">
+          <input type="radio" name="slider" id="slide1" checked>
+          <input type="radio" name="slider" id="slide2">
+          <input type="radio" name="slider" id="slide3">
+          <input type="radio" name="slider" id="slide4">
+          <div id="slides">
+             <div id="overflow">
+                <div class="inner">
+                   <div class="slide slide_1">
+                      <div class="slide-content">
+                         <h2>Novo padre vigário da paróquia</h2>
+                         <img src="img/criancas.jpg" alt="">
+                      </div>
+                   </div>
+                   <div class="slide slide_2">
+                      <div class="slide-content">
+                         <h2>Slide 2</h2>
+            
+                      </div>
+                   </div>
+                   <div class="slide slide_3">
+                      <div class="slide-content">
+                         <h2>Slide 3</h2>
+                         <p>Content for Slide 3</p>
+                      </div>
+                   </div>
+                   <div class="slide slide_4">
+                      <div class="slide-content">
+                         <h2>Slide 4</h2>
+                         <p>Content for Slide 4</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div id="controls">
+             <label for="slide1"></label>
+             <label for="slide2"></label>
+             <label for="slide3"></label>
+             <label for="slide4"></label>
+          </div>
+          <div id="bullets">
+             <label for="slide1"></label>
+             <label for="slide2"></label>
+             <label for="slide3"></label>
+             <label for="slide4"></label>
+          </div>
+       </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h2>Fale conosco!</h2>
+          </header>
+          <div class="content">
+            <ul>
+              <li>
+                <a href="mailto: " title="Enviar e-mail">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                      stroke="#00856F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22 6L12 13L2 6"
+                      stroke="#00856F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  
+                </a>
+              </li>
+              <li>
+                <a href="tel:+558597183394" title="Fazer ligação"
+                  >
+                  <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"
+                    fill="white"
+                  />
+                </svg>
+                  +55 85 9718 3394</a
+                >
+              </li>
+            </ul>
+
+            <a
+              class="button"
+              title="Me chama no zap!"
+              href="https://api.whatsapp.com/send?phone=558597183394&text=Ol%C3%A1%20Cosmo,%20gostaria%20de%20saber%20como%20fa%C3%A7o%20pra%20entrar%20na%20pascom%20"
+              target="_blank"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                />
+              </svg>
+              whatsapp
+            </a>
+            <a
+              class="button"
+              title="Chama a gente no insta!"
+              href="https://www.instagram.com/pascom.pjcr/"
+              target="_blank"
+            >
+              <svg
+              width="24" 
+              height="24" 
+              viewBox="0 0 16 16"
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+            > 
+              <path  
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+              /> 
+              </svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+      </div>
+    </section>
+    
+    <a id="backToTopButton" title="Voltar ao topo" href="#home">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#00856F" />
+        <path
+          d="M20 27V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+          <a class="logo" href="#"><img src="https://th.bing.com/th/id/R.14bea72f5b6f8fd3b20dd35fc118f5ea?rik=kn%2b5mG5fcCMgQQ&riu=http%3a%2f%2fwww.arquidiocesedesantarem.org.br%2fimagens%2fupload%2flogo-pascom-primaria_29-01-2021-09-38-51.png&ehk=6wOX2%2bnvUIFgw31zwclH5nHa1KNNNHIVoQ%2fp6IpLiyc%3d&risl=&pid=ImgRaw&r=0"/><p><h5></h5></p></a>
+
+          <p>
+            ©2024 por Victor Manuel e Rafael Bezerra. <br />
+            Todos os direitos reservados.
+          </p>
+        </div>
+
+        <div class="col-b">
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://www.instagram.com/paroquiajesuscristo/"
+                title="Instagram"
+                target="_blank"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 6.49997H17.51"
+                    stroke="#FFFAF1"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+                <a
+                  href="https://www.youtube.com/@PadreFranciscoDanisio"
+                  title="Youtube"
+                  target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+                      fill="rgba(255,255,255,1)"
+                    />
+                  </svg>
+                </a>
+              </li>
+            <li>
+              <a
+                href="https://www.facebook.com/paroquia.itapipoca"
+                title="Facebook"
+                target="_blank"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                    fill="rgba(255,255,255,1)"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+                <a
+                  href="https://www.radios.com.br/aovivo/radio-cristo-redentor/198647"
+                  title="Web Radio"
+                  target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M224 0C100.3 0 0 100.3 0 224c0 92.22 55.77 171.4 135.4 205.7c-3.48-20.75-6.17-41.59-6.998-58.15C80.08 340.1 48 285.8 48 224c0-97.05 78.95-176 176-176s176 78.95 176 176c0 61.79-32.08 116.1-80.39 147.6c-.834 16.5-3.541 37.37-7.035 58.17C392.2 395.4 448 316.2 448 224C448 100.3 347.7 0 224 0zM224 312c-32.88 0-64 8.625-64 43.75c0 33.13 12.88 104.3 20.62 132.8C185.8 507.6 205.1 512 224 512s38.25-4.375 43.38-23.38C275.1 459.9 288 388.8 288 355.8C288 320.6 256.9 312 224 312zM224 280c30.95 0 56-25.05 56-56S254.1 168 224 168S168 193 168 224S193 280 224 280zM368 224c0-79.53-64.47-144-144-144S80 144.5 80 224c0 44.83 20.92 84.38 53.04 110.8c4.857-12.65 14.13-25.88 32.05-35.04C165.1 299.7 165.4 299.7 165.6 299.7C142.9 282.1 128 254.9 128 224c0-53.02 42.98-96 96-96s96 42.98 96 96c0 30.92-14.87 58.13-37.57 75.68c.1309 .0254 .5078 .0488 .4746 .0742c17.93 9.16 27.19 22.38 32.05 35.04C347.1 308.4 368 268.8 368 224z"
+                      fill="rgba(255,255,255,1)"
+                    />
+                  </svg>
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
